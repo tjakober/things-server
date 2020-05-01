@@ -1,5 +1,5 @@
 {
     "port": "8081",
-    "mailuser": "reservoir@3sweb.net",
-    "mailpass": "vH7zm4*9"
+    "mailuser": "mymail@myserver.net",
+    "mailpass": "MyPassWord"
 }
