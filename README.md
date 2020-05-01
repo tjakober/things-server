@@ -1,5 +1,3 @@
-# things-server
- Server to communicate internet-of-things nodes with the browser
  # things-server
 Server to communicate internet-of-things nodes with the browser.
 The server is based on nodejs and communicates via websocket between the "things" (ESP-8266 devices using Nodemcu and Lua) and a web-browser anywhere in the world. It uses JSON messages as a communication protocol.
