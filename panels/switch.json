@@ -1,0 +1,104 @@
+{
+  "name": "Switch",
+  "filename": "switch",
+  "size": {
+    "rows": 8,
+    "cols": 7,
+    "panels": 300
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Schalter",
+      "js": "switch.js",
+      "size": {
+        "rows": "3",
+        "cols": "3"
+      },
+      "pos": {
+        "top": "0",
+        "left": "0"
+      },
+      "data": [
+        {
+          "sq": 1,
+          "label": "Red Led",
+          "name": "Toggle Switch 1",
+          "from": "11682725",
+          "value": "OFF",
+          "unit": "",
+          "format": "sToggle"
+        },
+        {
+          "sq": 2,
+          "label": "Orange Led",
+          "name": "Toggle Switch 2",
+          "from": "11682725",
+          "value": "OFF",
+          "unit": "",
+          "format": "sToggle"
+        },
+        {
+          "sq": 3,
+          "label": "PIR Dauer",
+          "name": "PIR Sensor 1",
+          "from": "11682725",
+          "field": "duration",
+          "value": "0",
+          "unit": "min",
+          "format": "N3"
+        },
+        {
+          "sq": 4,
+          "label": "PIR noch",
+          "name": "PIR Sensor 1",
+          "from": "11682725",
+          "field": "rest",
+          "value": "0",
+          "unit": "min",
+          "format": "n3"
+        },
+        {
+          "sq": 5,
+          "label": "Unter Hellg.",
+          "name": "Light Sensor",
+          "from": "11682725",
+          "value": "0",
+          "field": "onbelow",
+          "unit": "%",
+          "format": "N3"
+        },
+        {
+          "sq": 6,
+          "label": "Helligkeit",
+          "name": "Light Sensor",
+          "from": "11682725",
+          "value": "0",
+          "unit": "%",
+          "format": "n3"
+        },
+        {
+          "sq": 7,
+          "label": "Helligkeit",
+          "name": "Light Sensor",
+          "from": "11682725",
+          "value": "",
+          "type": "vmeter",
+          "size": "140",
+          "bg": "images/meter.png",
+          "angle": 90,
+          "low": 0,
+          "high": 100,
+          "center": 72,
+          "hand": 45,
+          "steps": 5,
+          "munit": "%"
+        }
+      ]
+    }
+  ]
+}

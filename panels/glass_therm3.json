@@ -1,0 +1,79 @@
+{
+    "name": "Glass Thermometer",
+    "filename": "glass_therm3",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Temperaturen",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "Innen",
+                    "name": "Temp 28EE6BAA2C160222",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": 235,
+                    "width": 45,
+                    "high": 50,
+                    "low": -40,
+                    "top": 248,
+                    "bottom": 818,
+                    "center": 757,
+                    "mwidth": 8,
+                    "mcolor": "red",
+                    "type": "tmeter",
+                    "glass": "/images/therm_outdoor.png"
+                },{
+                    "sq": 1,
+                    "label": "Aussen",
+                    "name": "Temp 28EE0B372E1601E2",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": 235,
+                    "width": 45,
+                    "high": 50,
+                    "low": -40,
+                    "top": 248,
+                    "bottom": 818,
+                    "center": 757,
+                    "mwidth": 8,
+                    "mcolor": "red",
+                    "type": "tmeter",
+                    "glass": "/images/therm_outdoor.png"
+                },{
+                    "sq": 1,
+                    "label": "Keller",
+                    "name": "Temp 28EEDEA22C1602A3",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": 235,
+                    "width": 45,
+                    "high": 50,
+                    "low": -40,
+                    "top": 248,
+                    "bottom": 818,
+                    "center": 757,
+                    "mwidth": 8,
+                    "mcolor": "red",
+                    "type": "tmeter",
+                    "glass": "/images/therm_outdoor.png"
+                }
+            ]
+        }
+    ]            
+}

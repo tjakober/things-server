@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Old English Text MT";
+    font-weight: normal;
+    src: url("OLDENGL.TTF");
+}
+/*
+div[from="11683232"][name="Air Pressure"] {
+    margin-left: calc((100% - 260px) / 2);
+}*/

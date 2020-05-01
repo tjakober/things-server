@@ -1,0 +1,43 @@
+{
+    "name": "Hygrometer analog",
+    "filename": "hygro_meyrowitz",
+    "size": {
+        "rows": 4,
+        "cols": 3,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Hygrometer",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "name": "Air Humidity",
+                    "from": "11683232",
+                    "value": 0,
+                    "type": "vmeter",
+                    "size": 260,
+                    "angle": 73,
+                    "low": 30,
+                    "high": 100,
+                    "hand": 0,
+                    "center": 341,
+                    "steps": 0,
+                    "bg": "images/hygro_meyrowitz.png",
+                    "hand_img": "images/hygro_meyrowitz_hand.png",
+                    "hand_center": 233
+                }]
+        }]
+}

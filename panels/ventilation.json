@@ -1,0 +1,149 @@
+{
+	"name": "Werkstatt Ljig",
+	"filename": "ventilation",
+	"size": {
+		"rows": 8,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 7,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Raumkonditionen",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Temperatur",
+					"label": "Temperatur",
+					"from": "970151",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name": "Luftdruck",
+					"label": "Luftdruck",
+					"from": "970151",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Luftfeuchtigkeit",
+					"label": "Luftfeuchtigkeit",
+					"from": "970151",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temperatur40:238:216:97:46:22:1:35",
+					"label": "Lufttemperatur",
+					"from": "970151",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Ventilation",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "3",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"label": "Ventilator",
+					"name": "Ventilator",
+					"from": "11682485",
+					"value": "TOGGLE",
+					"unit": "",
+					"format": "sToggle"
+				},
+				{
+					"sq": "2",
+					"label": "Start",
+					"name": "Timer",
+					"from": "11682485",
+					"field": "Start",
+					"value": "00:00",
+					"format": "t5",
+					"unit": "Uhr"
+				},
+				{
+					"sq": "3",
+					"label": "Dauer",
+					"name": "Timer",
+					"from": "11682485",
+					"field": "Duration",
+					"value": "0",
+					"format": "N3",
+					"unit": "min"
+				},
+				{
+					"sq": "4",
+					"label": "Noch",
+					"name": "Timer",
+					"from": "11682485",
+					"value": "",
+					"format": "n3",
+					"formula": "oMsg.cur",
+					"unit": "min"
+				},
+				{
+					"sq": "5",
+					"label": "Start2",
+					"name": "Timer",
+					"from": "11682485",
+					"field": "Start2",
+					"value": "00:00",
+					"format": "t5",
+					"unit": "Uhr"
+				},
+				{
+					"sq": "6",
+					"label": "Dauer",
+					"name": "Timer",
+					"from": "11682485",
+					"field": "Duration2",
+					"value": "0",
+					"format": "N3",
+					"unit": "min"
+				},
+				{
+					"sq": "7",
+					"label": "Noch",
+					"name": "Timer",
+					"from": "11682485",
+					"value": "",
+					"format": "n3",
+					"formula": "oMsg.cur2",
+					"unit": "min"
+				}
+			]
+		}
+	]
+}

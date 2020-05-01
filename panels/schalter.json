@@ -1,0 +1,62 @@
+{
+	"name": "Schalter",
+	"filename": "schalter",
+	"size": {
+		"rows": 5,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 7,
+		"top": 4
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Lampe",
+			"ja": "switch.js",
+			"size": {
+				"rows": "1",
+				"cols": "4"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"label": "Toggle Switch 1",
+					"name": "Toggle Switch 1",
+					"from": "2336875",
+					"value": "TOGGLE",
+					"unit": "",
+					"format": "sToggle"
+				}
+			]
+		},
+		{
+			"name": "Steckdose",
+			"ja": "switch.js",
+			"size": {
+				"rows": "1",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"label": "Steckdosen-Schalter",
+					"name": "Toggle Switch 1",
+					"from": "8696584",
+					"value": "TOGGLE",
+					"unit": "",
+					"format": "sToggle"
+				}
+			]
+		}
+	]
+}

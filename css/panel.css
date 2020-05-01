@@ -1,0 +1,419 @@
+/*
+ © 3S System Software Support, Winterthur, Switzerland
+
+ Author:        Thomas Jakober <tj at 3sweb.net>
+ Created:       11.06.2017, 23:37:06
+ Program Title: 
+ File Name:     panel.css
+ 
+*/
+@font-face {
+    font-family:dejavu sans;
+    font-weight:normal;
+    src: url(/css/DejaVuSans.ttf);
+}
+
+@font-face {
+    font-family:dejavu sans;
+    font-weight:bold;
+    src: url(/css/DejaVuSans-Bold.ttf);
+}
+
+input {
+    border: 3px inset lightgray;
+}
+input:disabled {
+    background-color: transparent;
+}
+input[type=time] {
+    width: 85px;
+}
+body {
+    font-family: dejavu sans;
+    -webkit-text-size-adjust: none;
+}
+#menu {
+    position: relative;
+    margin-left: 0;
+    padding-left: 20px;
+    overflow-y: auto;
+    max-width: 94vw;
+    min-width: 94vw;
+    white-space: nowrap;
+    height: 24px;
+}
+#menu li {
+    display: inline-block;
+    padding: 2px 5px;
+    border: 1px solid blue;
+    margin: 0 2px;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    background-color: lightblue;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+#menu .sel {
+    background-color: white;
+    border-bottom-color: white;
+    z-index: 10;
+}
+#menu .hl {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid blue;
+    top: 22px;
+    width: 94vw;
+    z-index: 6;
+}
+
+#content {
+    height: 78vh;
+}
+
+#modules {
+    display: block;
+    height: 100%;
+}
+
+#m_panel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+#log {
+    width: 99vw;
+    height: 100px;
+    white-space: nowrap;
+    overflow: scroll;
+    border-top: 1px solid blue;
+}
+.row {
+}
+.col {
+    height: 100%;
+    display: inline-block;
+}
+
+/***********************************************/
+.thing {
+    border: 2px solid brown;
+    border-radius: 18px;
+    background-color: #CFD8C5;
+    position: absolute !important;  /* Force jquery-ui's' setting to relative back to absolute. */
+    box-shadow: 1px 2px 4px #5e1a00;
+    border-image-source: url(/images/screw.png);
+    border-image-slice: 28;
+    border-image-width: auto;
+}
+.thing h3 {
+    text-align: center;
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+.thing h3 input {
+    width: 80%;
+    font-weight: bold;
+}
+.group {
+    width: 90%;
+    border: 1px dotted gray;
+    margin: 15px auto 10px auto;
+    padding: 10px;
+    position: relative;
+}
+.groupTitle {
+    position: relative;
+    background-color: #CFD8C5;
+    color: gray;
+    position: absolute;
+    top: -10px;
+    margin: 0 auto;
+    padding: 0 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+.groupTitle input {
+    width: 80%;
+}
+.tmeter {
+    text-align: center;  /* Mercury thermometers: lign all them centered */
+}
+.tmeter .data {
+    text-align: center;  /* Mercury thermometers: lign all them centered */
+    display: inline-block;
+    margin: 0 15px;
+}
+.tlabel {
+    color: black;
+}
+.newPanel {
+    z-index: 10;
+}
+.data {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    padding: 0px;
+    border-bottom: 1px dotted lightgray;
+}
+.data.coverMain {
+    border-bottom: 0;    
+}
+.data.cover {
+    position: absolute;
+    top: 10px;
+}
+.data:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.label {
+    display: inline-block;
+    width: calc(100% - 150px);
+}
+#m_ctrlList {
+    display: block;
+    overflow-y: scroll;
+    white-space: nowrap;
+    height: 100%;
+}
+#m_nodeList {
+    display: block;
+    overflow-y: scroll;
+    white-space: nowrap;
+    height: 100%;
+}
+#nodeList {
+    position: relative;
+}
+#nodeInfo {
+    height: 100%;
+}
+#nodeInfo .label {
+    width: calc(125px);
+}
+#m_upload {
+    height: 100%;
+}
+#m_server {
+    height: 100%;
+}
+#m_settings {
+    height: 100%;
+}
+#m_settings .label {
+    width: calc(100% - 400px);
+}
+.value {
+    display: inline-block;
+    vertical-align: middle;
+}
+#m_settings input[type=text] {
+    width: 395px;
+}
+#m_settings {
+    white-space: nowrap;
+    overflow: auto;
+    width: 530px;
+}
+#restart {
+    position: absolute;
+    left: 200px;
+    top: 158px;
+}
+#m_settings ul {
+    list-style: none;
+}
+#m_settings span {
+    margin-left: 5px;
+}
+.n3_1 {
+    text-align: right;
+    width: 6ch;
+}
+.n4_1 {
+    text-align: right;
+    width: 6ch;
+}
+.unit {
+    display: inline-block;
+    margin-left: 5px;
+}
+.switch {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 20px 16px;
+    border: 1px solid gray;
+}
+.sToggle {
+    width: 40px;
+    height: 22px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 20px 20px 16px;
+    cursor: pointer;
+}
+.ON {
+    background-image: url(/images/switchon.png);
+    background-size: 20px 20px;
+    margin-left: 18px;
+}
+.OFF {
+    background-image: url(/images/switchoff.png);
+    background-size: 20px 20px;
+    margin-left: 0px;
+}
+.disabled {
+    color: lightgray;
+}
+
+.indicator {
+    background-image: url(/images/indicator.png); 
+    background-size: 110px 22px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    background-clip: content-box;
+}
+
+.indicator.Off {
+    background-position: 0 0 !important;
+}
+.indicator.ired {
+    background-position: -22px 0;
+}    
+.indicator.igreen {
+    background-position: -44px 0;
+}
+.indicator.iblue {
+    background-position: -66px 0;
+}
+.indicator.disabled {
+    background-position: -88px 0 !important;
+}
+.Blink.blOff {
+    background-position: 0 0 !important;
+}
+
+.sLabel, .sValue{
+    display: inline-block;
+}
+.ctrl .sLabel:nth-child(1) {
+    width: 53px;
+}
+.ctrl .sLabel:nth-child(3) {
+    width: 60px;
+}
+.ctrl .sValue:nth-child(2) {
+    width: 100px;
+}
+.ctrl .sValue:nth-child(4) {
+    width: 200px;
+}
+#node .sLabel:nth-child(1) {
+    width: 53px;
+}
+.node .sLabel:nth-child(3) {
+    width: 200px;
+}
+#node > li > span {
+    cursor: pointer;
+}
+
+#nodeDisp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+}
+#nodeInfo {
+    border: 3px solid blue;
+    border-top: 20px solid blue;
+    background-color: aliceblue;
+    padding: 5px;
+    width: 100%;
+}
+
+#serverInfo {
+    border: 3px solid blue;
+    border-top: 20px solid blue;
+    background-color: aliceblue;
+    padding: 5px; 
+    width: 300px;
+}
+
+#serverInfo .label {
+    width: calc(100% - 170px);
+}
+
+.infoLine {
+    white-space: nowrap;
+}
+
+.nodeCmd {
+    width: 100%;
+    height: 36px;
+    background-color: lightgray;
+    border-bottom: 2px gray;
+    padding-top: 8px;
+    padding-left: 5px;
+}
+
+.button {
+    height: 18px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 4px;
+    margin: 2px 2px;
+    display: inline-block;
+    box-shadow: 2px 2px darkgray;
+}
+
+#nodeLog {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    width: 100%;
+    height: 290px;
+    overflow-y: auto;
+}
+
+.logEntry {
+    min-width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Upload */
+
+.file {
+    width: 18px;
+    height: 18px;
+    background-image: url(/images/upload.png);
+    display: inline-block;
+    margin: 1px 5px 2px 20px;
+}
+
+input[name=file] {
+    display: none;
+}

@@ -1,0 +1,66 @@
+{
+    "name": "Barometer analog",
+    "filename": "baro_eng",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "css/baro_eng.css",
+    "groups": [{
+            "name": "Barometer",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "cover": 1,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "11683232",
+                    "value": 0,
+                    "type": "vmeter",
+                    "size": 260,
+                    "angle": 270,
+                    "low": 950,
+                    "high": 1050,
+                    "hand": 0,
+                    "center": 362,
+                    "steps": 0,
+                    "munit": "kPa",
+                    "munit_font": "15px Old English Text MT",
+                    "bg": "images/baro_eng1.png",
+                    "hand_img": "images/baro_eng_hand.png",
+                    "hand_center": 258
+                },
+                {
+                    "sq": 2,
+                    "cover": 2,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "11683232",
+                    "type": "vmeter",
+                    "field": "p24h",
+                    "size": 260,
+                    "angle": 270,
+                    "low": 950,
+                    "high": 1050,
+                    "hand": 0,
+                    "center": 362,
+                    "steps": 0,
+                    "bg": "images/baro_eng1.png",
+                    "hand_img": "images/baro_eng_hand2.png",
+                    "hand_center": 242,
+                    "function": "panel.hourbefore"
+                }]
+        }]
+}

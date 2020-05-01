@@ -1,0 +1,141 @@
+{
+    "name": "Werkstatt Ljig",
+    "filename": "test",
+    "size": {
+        "rows": 4,
+        "cols": 3,
+        "panels": 300
+    },
+    "pos": {
+        "left": 7,
+        "top": 3
+    },
+    "css": "",
+    "groups": [{
+            "name": "Raumkonditionen",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [{
+                    "sq": "1",
+                    "name": "Temperature",
+                    "label": "Temperatur",
+                    "from": "11683232",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }, {
+                    "sq": "2",
+                    "name": "Dewpoint",
+                    "label": "Taupunkt",
+                    "from": "11683232",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }, {
+                    "sq": "3",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "11683232",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                }, {
+                    "sq": "4",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "11683232",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                }, {
+                    "sq": "5",
+                    "name": "Temp 28EEC0292E16019D",
+                    "label": "Lufttemperatur",
+                    "from": "11683232",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }]
+        }, {
+            "name": "Ventilation",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "3",
+                "left": "0"
+            },
+            "data": [{
+                    "sq": "1",
+                    "label": "Ventilator",
+                    "name": "Ventilator",
+                    "from": "11682485",
+                    "value": "TOGGLE",
+                    "unit": "",
+                    "format": "sToggle"
+                }, {
+                    "sq": "2",
+                    "label": "Start",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "field": "Start",
+                    "value": "00:00",
+                    "format": "t5",
+                    "unit": "Uhr"
+                }, {
+                    "sq": "3",
+                    "label": "Dauer",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "field": "Duration",
+                    "value": "0",
+                    "format": "N3",
+                    "unit": "min"
+                }, {
+                    "sq": "4",
+                    "label": "Noch",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "value": "",
+                    "format": "n3",
+                    "formula": "oMsg.cur",
+                    "unit": "min"
+                }, {
+                    "sq": "5",
+                    "label": "Start2",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "field": "Start2",
+                    "value": "00:00",
+                    "format": "t5",
+                    "unit": "Uhr"
+                }, {
+                    "sq": "6",
+                    "label": "Dauer",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "field": "Duration2",
+                    "value": "0",
+                    "format": "N3",
+                    "unit": "min"
+                }, {
+                    "sq": "7",
+                    "label": "Noch",
+                    "name": "Timer",
+                    "from": "11682485",
+                    "value": "",
+                    "format": "n3",
+                    "formula": "oMsg.cur2",
+                    "unit": "min"
+                }]
+        }]
+}

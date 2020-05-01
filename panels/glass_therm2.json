@@ -1,0 +1,45 @@
+{
+    "name": "Glass Thermometer",
+    "filename": "glass_therm2",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Temperaturen",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "Innen",
+                    "name": "Temp 28EE1E882C1602EA",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": 260,
+                    "width": 45,
+                    "high": 50,
+                    "low": -40,
+                    "top": 248,
+                    "bottom": 818,
+                    "center": 757,
+                    "mwidth": 8,
+                    "mcolor": "red",
+                    "type": "tmeter",
+                    "glass": "/images/therm_outdoor.png"
+                }
+            ]
+        }
+    ]            
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Barometer analog",
+    "filename": "baro_meyrowitz",
+    "size": {
+        "rows": 4,
+        "cols": 3,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "css/baro_eng.css",
+    "groups": [{
+            "name": "Barometer",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "11683232",
+                    "value": 0,
+                    "type": "vmeter",
+                    "size": 260,
+                    "angle": 300,
+                    "low": 917.7,
+                    "high": 1083.6,
+                    "hand": 0,
+                    "center": 170,
+                    "steps": 0,
+                    "munit": "",
+                    "munit_fon": "",
+                    "bg": "images/baro_meyrowitz.png",
+                    "hand_img": "images/baro_meyrowitz_hand.png",
+                    "hand_center": 105
+                }]
+        }]
+}

@@ -1,0 +1,220 @@
+{
+	"name": "Raumkonditionen",
+	"filename": "raumkond",
+	"size": {
+		"rows": 11,
+		"cols": 7,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Barometer Ljig",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Luftdruck",
+					"label": "Luftdruck",
+					"from": "2271108",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "2",
+					"name": "Luftfeuchtigkeit",
+					"label": "Luftfeuchtigkeit",
+					"from": "2271108",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temperatur1",
+					"label": "Radiator",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temperatur28:EE:A8:63:2E:16:01:49",
+					"label": "Wohnzimmer",
+					"from": "8699778",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temperatur2",
+					"label": "Büro",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name": "Temperatur1",
+					"label": "Werkstatt",
+					"from": "8699789",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "7",
+					"name": "Temperatur3",
+					"label": "Aussen",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Barometer Beograd",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "4",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Temperatur",
+					"label": "Temperatur",
+					"from": "2316356",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name": "Luftdruck",
+					"label": "Luftdruck",
+					"from": "2316356",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Luftfeuchtigkeit",
+					"label": "Luftfeuchtigkeit",
+					"from": "2316356",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temperatur40:255:214:4:128:23:4:5",
+					"label": "Temp. Innen",
+					"from": "2316356",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temperatur40:255:62:19:128:22:5:197",
+					"label": "Temp. Aussen",
+					"from": "2316356",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Barometer Winterthur",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "8",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Temperature",
+					"label": "Temperatur",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "2338011",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2338011",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FFCE9871170311",
+					"label": "Büro",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 28FF7FC3711703DF",
+					"label": "Switch",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 28FF47088017046D",
+					"label": "Aussen",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		}
+	]
+}

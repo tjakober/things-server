@@ -1,2 +1,11 @@
 # things-server
  Server to communicate internet-of-things nodes with the browser
+ # things-server
+Server to communicate internet-of-things nodes with the browser.
+The server is based on nodejs and communicates via websocket between the "things" (ESP-8266 devices using Nodemcu and Lua) and a web-browser anywhere in the world. It uses JSON messages as a communication protocol.
+## Principle of operation
+The browser acts as a control panel to display data from things which read sensors. There is a two-way communication. The things can send their data to the control panel as well as well as input elements on the control panel can send commands to the things. There can be multiple things communicating with multiple control panels. Every browser can configure its own collection of control panels.
+![Control Panel Example](/Docs/images/ThingsPanel.png)
+Each element within the panel is connected with a data service on a thing node. Thing nodes can have multiple sensors on it.  And each sensor can have multiple data services, input as well as output. The data services can be designed to deliver data upon request or on a regular or asynchronous basis.
+Thing nodes will register themself on the server upon startup, telling the available services to the server. The same do the control panels, they register the services they want to subscribe.
+During operation, the data records from the thing nodes will be transferred to all the control panels wich have rquested theyr service. That means that the same service can be used on multiple control panels e.g. on smartphones or computer screens at the same time. Let's make an example: A thing node is designed to switch on a room lamp somewhere. On a control panel there is a switch which can be clocked to switch on this lamp. The control panel sends a message to the server which in turn transfers this message to the thing which switches on the lamp. As response, the thing sends back the new state with a message to the server. The server now transfers this message to all the control panels who have subscribed to this service. This means that all panels on computers, tablets and smartphones indicate now that this lamp is switcheed on. If you switched on the lamp on the computer, you can now switch it off on the smartphone.
