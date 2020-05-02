@@ -330,7 +330,7 @@ var panel = {
                     // Draw scale
                     panel.meterScale(hsel, oData);
                 }
-                // the image contains already a scale, create it's cavas
+                // the image contains already a scale, create it's canvas
                 var hsel = $('<canvas>')
                         .addClass('meterCanvas')
                         .css({
@@ -460,9 +460,12 @@ var panel = {
                             var low = vmeter.low;
                             var high = vmeter.high;
                             var max = high - low;
-                            var value = vmeter.field ? oMsg[vmeter.field] : oMsg.value;
+                            var value = vmeter.field ? oMsg[vmeter.field] : oMsg.value;  // if value derives from a extra datafield instead ov value
                             if (vmeter.function) {
-                                value = executeFunctionByName(vmeter.function, window, value);
+                                value = executeFunctionByName(vmeter.function, window, value);  // data needs to be processed by a specioal function
+                                if (value === false) {
+                                    return;
+                                }
                             }
                             //if (name === 'Air Humidity') { value = 15; } else if(name === 'Air Pressure') { value = 950; } else { value = 0; }
                             if (low) {
@@ -519,7 +522,7 @@ var panel = {
                         ctx.stroke();
                         break;
                         
-                    // Horichontal scale with a bar showing the data value
+                    // Horizontal scale with a bar showing the data value
                     case 'hscale':
                         var hsel = $("canvas", this);
                         var cEl = hsel.get(0);
@@ -801,6 +804,9 @@ var panel = {
     // value at 3:00pm (or 15:00h)
     // so we set this pointer to the value before 23 hours to indicate the change
     hourbefore: function(value) {
+        if (value === undefined) {
+            return false;
+        }
         var tm = new Date();
         var h = tm.getHours() + 1;
         if (h === 24) {
