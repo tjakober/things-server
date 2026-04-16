@@ -1,0 +1,36 @@
+{
+    "name": "Helligkeit",
+    "filename": "licht_e-wekstatt_ljig",
+    "size": {
+        "rows": 2,
+        "cols": 7
+    },
+    "pos": {
+        "left": 0,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "E-Werkstatt Ljig",
+            "data": [
+                {
+                    "label": "",
+                    "name": "Light Sensor",
+                    "from": "2271108",
+                    "value": "",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 100,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 4,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "silver"
+                }
+            ]
+        }
+    ]
+}

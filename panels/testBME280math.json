@@ -1,0 +1,72 @@
+{
+	"name": "Raumkonditionen",
+	"filename": "testBME280math",
+	"size": {
+		"rows": 11,
+		"cols": 7,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+        {
+            "name": "BME280 Math Test",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "name": "Temperature",
+                    "label": "Temperatur",
+                    "from": "8328989",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }, {
+                    "sq": "2",
+                    "name": "Dewpoint",
+                    "label": "Taupunkt",
+                    "from": "8328989",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }, {
+                    "sq": "3",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "8328989",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                }, {
+                    "sq": "4",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "8328989",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                }, {
+                    "sq": "5",
+                    "name": "Air Pressure",
+                    "label": "Höhe ü.M.",
+                    "from": "8328989",
+                    "field": "altitude",
+                    "value": "",
+                    "unit": "m",
+                    "format": "n4_1"
+                }
+            ]
+        }
+    ]
+}

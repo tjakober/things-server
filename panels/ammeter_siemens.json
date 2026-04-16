@@ -1,0 +1,35 @@
+{
+  "name": "ammeter_siemens",
+  "filename": "mameter1",
+  "size": {
+    "rows": 8,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Helligkeit",
+      "data": [
+        {
+          "sq": 1,
+          "name": "Light Sensor",
+          "from": "11682725",
+          "value": "",
+          "size": "auto",
+          "low": 0,
+          "high": 100,
+          "scale_steps": 5,
+          "scale_div": 1,
+          "scale_subdiv": 3,
+          "munit": "%",
+          "type": "ammeter_siemens",
+          "js": "vmeter.js"
+        }
+      ]
+    }
+  ]
+}

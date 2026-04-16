@@ -1,0 +1,635 @@
+{
+    "name": "iPhone",
+    "filename": "_iPhone",
+    "size": {
+        "rows": 75,
+        "cols": 8
+    },
+    "pos": {
+        "left": 0,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Light Office Winterthur",
+            "js": "switch.js",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+				{
+					"sq": 1,
+					"label": "Büro",
+					"name": "LED 1 PWM",
+					"from": "11682619",
+					"value": "20",
+					"unit": "%",
+					"format": "R0,100"
+				},
+				{
+					"sq": 2,
+					"label": "Licht",
+					"name": "Rotary Switch",
+					"from": "11682619",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				},
+				{
+					"sq": 1,
+					"label": "Arbeitsplatz",
+					"name": "LED 1 PWM",
+					"from": "13455377",
+					"value": "20",
+					"unit": "%",
+					"format": "R0,100"
+				},
+				{
+					"sq": 2,
+					"label": "Licht",
+					"name": "Rotary Switch",
+					"from": "13455377",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				}
+
+            ]
+        },
+        {
+            "name": "Licht E-Werkst. Ljig",
+            "js": "switch.js",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": 1,
+                    "label": "Hauptlicht",
+                    "name": "Main Light",
+                    "from": "6985234",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 2,
+                    "label": "Sensorlicht",
+                    "name": "Sensor Light",
+                    "from": "6985234",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 3,
+                    "label": "3D-Drucker",
+                    "name": "Toggle Switch 1",
+                    "from": "5097351",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 4,
+                    "label": "Stehlampe",
+                    "name": "Toggle Switch 2",
+                    "from": "5097351",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                }
+            ]
+        },
+        {
+            "name": "Barometer Ljig",
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "2271259",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                },
+                {
+                    "sq": "2",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "2271259",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "3",
+                    "name": "Temp 28FF003180160349",
+                    "label": "Radiator",
+                    "from": "2271259",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "4",
+                    "name": "Temp 289A1956B5013C6E",
+                    "label": "Wohnzimmer",
+                    "from": "11682485",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "5",
+                    "name": "Temp 28FF500880170440",
+                    "label": "Büro",
+                    "from": "2271259",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "6",
+					"name": "Temp 2888BC07B6013C09",
+					"label": "Werkstatt",
+					"from": "6985234",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "7",
+                    "name": "Temp 28086107B6013C51",
+                    "label": "Aussen",
+                    "from": "2271259",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }
+            ]
+        },
+        {
+            "name": "Barometer Beograd",
+            "pos": {
+                "top": "4",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "name": "Temperature",
+                    "label": "Temperatur",
+                    "from": "2316356",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "2",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "2316356",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                },
+                {
+                    "sq": "3",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "2316356",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "3",
+                    "name": "Temp 28FFD60480170405",
+                    "label": "Temp. Innen",
+                    "from": "2316356",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "4",
+                    "name": "Temp 28FF3E13801605C5",
+                    "label": "Temp. Aussen",
+                    "from": "2316356",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }
+            ]
+        },
+        {
+            "name": "Barometer Winterthur",
+            "pos": {
+                "top": "8",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "name": "Temperature",
+                    "label": "Temperatur",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "2",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                },
+                {
+                    "sq": "3",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "4",
+                    "name": "Temp 28FFCE9871170311",
+                    "label": "Büro",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+				{
+					"sq": "5",
+					"name": "Temp 286954BA0000004B",
+					"label": "Schlafzimmer",
+					"from": "13444828",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},                
+				{
+                    "sq": "6",
+                    "name": "Temp 28FF7FC3711703DF",
+                    "label": "Switch",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+				{
+                    "sq": "7",
+                    "name": "Temp 28BAF656B5013C6D",
+                    "label": "Wintergarten",
+                    "from": "11682522",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "8",
+                    "name": "Temp 281BC1570000000C",
+                    "label": "Aussen",
+                    "from": "2338011",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }
+            ]
+        },
+        {
+			"name": "Chalet Chems Grächen",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "8",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "8367689",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "8367689",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FF600A801704C3",
+					"label": "Wohnzimmer",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 281E815800000094",
+					"label": "Büro",
+					"from": "13445289",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 28FF1607B6013C9A",
+					"label": "Aussen",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+
+        {
+            "name": "Ljig Holzwerkstatt",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "2",
+                    "name": "Air Pressure",
+                    "label": "Luftdruck",
+                    "from": "9378291",
+                    "value": "",
+                    "unit": "hPa",
+                    "format": "n4_1"
+                },
+                {
+                    "sq": "3",
+                    "name": "Air Humidity",
+                    "label": "Luftfeuchtigkeit",
+                    "from": "9378291",
+                    "value": "",
+                    "unit": "%",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "4",
+                    "name": "Temp 28A4DE07B6013C50",
+                    "label": "Lufttemperatur",
+                    "from": "9378291",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+                {
+                    "sq": "4",
+                    "name": "Temp 28B63756B5013CFF",
+                    "label": "Aussentemperatur",
+                    "from": "9378291",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                }
+            ]
+        },
+        {
+            "name": "Ventilation Holzwerkstatt",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "3",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "label": "Ventilator",
+                    "name": "Ventilator",
+                    "from": "9378291",
+                    "value": "TOGGLE",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": "2",
+                    "label": "Start",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "field": "Start",
+                    "value": "00:00",
+                    "format": "t5",
+                    "unit": "Uhr"
+                },
+                {
+                    "sq": "3",
+                    "label": "Dauer",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "field": "Duration",
+                    "value": "0",
+                    "format": "N3",
+                    "unit": "min"
+                },
+                {
+                    "sq": "4",
+                    "label": "Noch",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "value": "",
+                    "format": "n3",
+                    "formula": "oMsg.cur",
+                    "unit": "min"
+                },
+                {
+                    "sq": "5",
+                    "label": "Start2",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "field": "Start2",
+                    "value": "00:00",
+                    "format": "t5",
+                    "unit": "Uhr"
+                },
+                {
+                    "sq": "6",
+                    "label": "Dauer",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "field": "Duration2",
+                    "value": "0",
+                    "format": "N3",
+                    "unit": "min"
+                },
+                {
+                    "sq": "7",
+                    "label": "Noch",
+                    "name": "Timer",
+                    "from": "9378291",
+                    "value": "",
+                    "format": "n3",
+                    "formula": "oMsg.cur2",
+                    "unit": "min"
+                }
+            ]
+        },
+        {
+            "name": "Holzheizung Ljig",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "3",
+                "left": "0"
+            },
+            "data": [
+				{
+					"sq": "1",
+					"name":   "Temp 2871F607B6013CB9",
+					"label":  "Kessel",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name":   "Temp 28FFB80C801704AA",
+					"label":  "Umgebung",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name":   "Temp 2852C107B6013C83",
+					"label":  "Vorlauf",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name":   "Temp 28FF3009801704DE",
+					"label":  "Rücklauf",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name":   "Difference",
+					"label":  "Unterschied",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name":   "Power",
+					"label":  "Leistung",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "kW",
+					"format": "n3_1"
+				},
+				{
+					"sq": 7,
+					"label":  "Umw.-Pumpe",
+					"name":   "Pumpe",
+					"from":   "2452246",
+					"value":  "OFF",
+					"unit":   "",
+					"format": "sToggle"
+				},
+				{
+					"sq": 8,
+					"label":  "Licht",
+					"name":   "Licht Heizung",
+					"from":   "2452246",
+					"value":  "OFF",
+					"unit":   "",
+					"format": "sToggle"
+				}
+			]
+		},
+        {
+			"name": "Filament Kiste",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "3",
+                "left": "0"
+            },
+			"data": [
+				{
+					"sq": "1",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2009069",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name":   "Temp 281A9358000000B7",
+					"label":  "Umgebung",
+					"from":   "2009069",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				}
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Barometer",
+    "filename": "baro_meyrowitz_beogr",
+    "size": {
+        "rows": 4,
+        "cols": 3,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Beograd",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "cover": 1,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "2316356",
+                    "cover": 1,
+                    "type": "baro_meyrowitz",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                }]
+        }]
+}

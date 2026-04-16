@@ -1,0 +1,30 @@
+{
+    "name": "Sonnenstand",
+    "filename": "sunpos_h",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Hammerfest",
+            "data": [
+                {
+                    "sq": 1,
+					"name": "hammerfest",
+					"size": "auto",
+                    "type": "standard",
+					"lat": 70.672511, 
+					"lon": 23.659627,
+					"UTCOffset": 0,
+                    "js": "sunpos.js"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+	"name": "Test AD Converter",
+	"filename": "testadc",
+	"size": {
+		"rows": 11,
+		"cols": 7,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Chalet Chems Grächen",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "8",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "5",
+					"name": "ADC 0",
+					"label": "Internal",
+					"from": "11683225",
+					"value": "",
+					"unit": "V",
+					"format": "n2_3"
+				},
+				{
+					"sq": "5",
+					"name": "ADC 1",
+					"label": "ADC 1",
+					"from": "11683225",
+					"value": "",
+					"unit": "V",
+					"format": "n2_3"
+				},
+				{
+					"sq": "5",
+					"name": "ADC 2",
+					"label": "ADC 2",
+					"from": "11683225",
+					"value": "",
+					"unit": "V",
+					"format": "n2_3"
+				}
+			]
+		}
+	]
+}

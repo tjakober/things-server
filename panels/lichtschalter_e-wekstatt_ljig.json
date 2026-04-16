@@ -1,0 +1,47 @@
+{
+	"name": "E-Werkst. Ljig",
+	"filename": "lichtschalter_e-wekstatt_ljig",
+	"size": {
+		"rows": 3,
+		"cols": 3
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Lichtschalter",
+			"js": "switch.js",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": 1,
+					"label": "Hauptlicht",
+					"name": "Main Light",
+					"from": "2271108",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				},
+				{
+					"sq": 2,
+					"label": "Sensorlicht",
+					"name": "Sensor Light",
+					"from": "2271108",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				}
+			]
+		}
+	]
+}

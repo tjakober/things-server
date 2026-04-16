@@ -1,0 +1,30 @@
+{
+    "name": "Sonnenstand",
+    "filename": "sunpos_m",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Mexico City",
+            "data": [
+                {
+                    "sq": 1,
+					"name": "mexicocity",
+					"size": "auto",
+                    "type": "standard",
+					"lat": 19.432193, 
+					"lon": -99.134517,
+					"UTCOffset": 0,
+                    "js": "sunpos.js"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Garten T",
+  "filename": "garden_t_brightness",
+  "size": {
+    "rows": 8,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Brightness",
+      "data": [
+        {
+          "sq": 1,
+          "name": "t-brightness",
+          "from": "miyo",
+          "value": "",
+          "size": "auto",
+          "low": 0,
+          "high": 50,
+          "scale_steps": 5,
+          "scale_div": 1,
+          "scale_subdiv": 3,
+          "munit": "kLux",
+		  "function": "panel.div1000",
+          "type": "mameter1",
+          "js": "vmeter.js"
+        }
+      ]
+    }
+  ]
+}

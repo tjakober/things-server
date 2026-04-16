@@ -1,0 +1,100 @@
+{
+    "name": "Horizontal Meter",
+    "filename": "hormeter",
+    "size": {
+        "rows": 13,
+        "cols": 14
+    },
+    "pos": {
+        "left": 0,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Feuchtigkeit Büro 1",
+            "data": [
+                {
+                    "label": "",
+                    "name": "Air Humidity",
+                    "from": "2271259",
+                    "value": "",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 100,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "silver"
+                }
+			]
+		}, {
+			"name": "Temperatur Büro 1",
+			"data": [
+				{
+					"sq": 4,
+					"label": "",
+                    "name": "Temp 28FFCE9871170311",
+                    "from": "2338011",
+                    "value": 0,
+                    "size": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+					"pointer_color": "red",
+					"pointer_type": "triangle",
+                    "munit": "°C",
+					"js": "hormeter.js",
+					"type": "silver"
+				}
+            ]
+        }, {
+			"name": "Temperatur Büro 2",
+			"data": [
+				{
+					"sq": 5,
+					"label": "",
+                    "name": "Temp 28FF500880170440",
+                    "from": "2271259",
+                    "value": 0,
+                    "size": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+					"pointer_color": "red",
+					"pointer_type": "needle",
+                    "munit": "°C",
+					"js": "hormeter.js",
+					"type": "black"
+				}
+            ]
+        },{
+            "name": "Rotary2",
+            "data": [
+                {
+                    "label": "",
+                    "name": "Air Humidity",
+                    "from": "2338011",
+                    "value": "",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 250,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "bargraph_black"
+                }
+			]
+		}
+    ]
+}

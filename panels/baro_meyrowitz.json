@@ -1,0 +1,34 @@
+{
+    "name": "Barometer analog",
+    "filename": "baro_meyrowitz",
+    "size": {
+        "rows": 7,
+        "cols": 7
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "css/baro_eng.css",
+    "groups": [{
+            "name": "Barometer",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "11683232",
+                    "value": 0,
+                    "type": "baro_meyrowitz",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                }]
+        }]
+}

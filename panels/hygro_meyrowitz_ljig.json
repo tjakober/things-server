@@ -1,0 +1,35 @@
+{
+    "name": "Hygrometer",
+    "filename": "hygro_meyrowitz_ljig",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Ljig",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "name": "Air Humidity",
+                    "from": "2271259",
+                    "value": 0,
+                    "size": "auto",
+                    "type": "hygro_meyrowitz",
+					"js": "vmeter.js"
+               }]
+        }]
+}

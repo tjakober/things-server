@@ -1,0 +1,30 @@
+{
+    "name": "Sonnenstand",
+    "filename": "sunpos_d",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Dakar",
+            "data": [
+                {
+                    "sq": 1,
+					"name": "dakar",
+					"size": "auto",
+                    "type": "standard",
+					"lat": 14.73190408379673, 
+					"lon": -17.492764554235343,
+					"UTCOffset": 0,
+                    "js": "sunpos.js"
+                }
+            ]
+        }
+    ]
+}

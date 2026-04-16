@@ -1,0 +1,68 @@
+{
+    "name": "Schalter 2a",
+    "filename": "schalter2a",
+    "size": {
+        "rows": 5,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 7,
+        "top": 4
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Steckdose",
+            "ja": "switch.js",
+            "size": {
+                "rows": "1",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": "1",
+                    "label": "Steckdosen-Schalter",
+                    "name": "Main Light",
+                    "from": "7074856",
+                    "value": "TOGGLE",
+                    "unit": "",
+                    "format": "sToggle"
+                },{
+					"sq": "2",
+					"name": "Temp 2821A356B5013C63",
+					"label": "Temperatur",
+					"from": "7074856",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+            ]
+        },
+        {
+            "name": "Helligkeit",
+            "data": [
+				{
+					"sq": "1",
+					"name": "Light Sensor",
+                    "from": "7074856",
+                    "value": "0",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 100,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 4,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "silver"
+				}
+            ]
+        }
+    ]
+}

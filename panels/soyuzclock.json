@@ -1,0 +1,27 @@
+{
+    "name": "Uhr",
+    "filename": "soyuzclock",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Heute",
+            "data": [
+                {
+                    "sq": 1,
+                    "size": "auto",
+                    "type": "soyuzclock",
+                    "js": "clock.js"
+                }
+            ]
+        }
+    ]
+}
+

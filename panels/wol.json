@@ -1,0 +1,35 @@
+{
+	"name": "Wake on LAN",
+	"filename": "wol",
+	"size": {
+		"rows": 4,
+		"cols": 6
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"groups": [
+		{
+			"name": "Ljig",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "THOMAS-HP-NB2",
+					"label": "THOMAS-HP-NB2",
+					"from": "2271259",
+					"value": "OFF",
+					"format": "sToggle"
+				}
+			]
+		}
+	]
+}

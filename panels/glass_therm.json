@@ -1,0 +1,40 @@
+{
+    "name": "Glass Thermometer",
+    "filename": "glass_therm",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Temperaturen",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "Innen",
+                    "name": "Temp 28EEF2B92C1602D6",
+                    "from": "8699778",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "LightSlateGray",
+                    "type": "bronzecap",
+                    "js": "tmeter.js"
+                }
+            ]
+        }
+    ]            
+}

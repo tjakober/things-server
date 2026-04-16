@@ -1,0 +1,8 @@
+{
+  "url": "bbrch.homeip.net",
+  "port": 3306,
+  "database": "things",
+  "username": "stats",
+  "password": "ClrSC9k43sK3",
+  "thingsserver": "ws://localhost:8081"
+}

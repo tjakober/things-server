@@ -1,0 +1,46 @@
+{
+    "name": "Thermo/Hygro",
+    "filename": "thermo_hygro_fischer2_beogr",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Beograd",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "name": "Air Humidity",
+                    "from": "2316356",
+                    "value": 0,
+                    "cover": 1,
+                    "size": "auto",
+                    "type": "thermo_hygro_fischer2_hygro",
+					"js": "vmeter.js"
+                },{
+                    "sq": 1,
+                    "name": "Temp 28FF3E13801605C5",
+                    "from": "2316356",
+                    "value": 0,
+                    "cover": 2,
+                    "size": "auto",
+                    "type": "thermo_hygro_fischer2_thermo",
+					"js": "vmeter.js"
+                }
+			]
+        }
+	]
+}

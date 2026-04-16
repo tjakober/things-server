@@ -1,0 +1,46 @@
+{
+    "name": "Thermo/Hygro",
+    "filename": "thermo_hygro_metro_ljig",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Ljig",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "cover": 1,
+                    "name": "Temp 28086107B6013C51",
+                    "from": "2271259",
+                    "value": 0,
+                    "type": "thermo_hygro_metro_thermo",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                },{
+                    "sq": 2,
+                    "label": "",
+                    "cover": 2,
+                    "name": "Air Humidity",
+                    "from": "2271259",
+                    "value": 0,
+                    "type": "thermo_hygro_metro_hygro",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                }]
+        }]
+}

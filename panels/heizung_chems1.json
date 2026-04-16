@@ -1,0 +1,72 @@
+{
+    "name": "Heizung Chems",
+    "filename": "heizung_chems1",
+    "size": {
+        "rows": 13,
+        "cols": 14,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Einstellungen",
+            "data": [
+                {
+                    "sq": 1,
+                    "name": "temperature",
+                    "label": "Solltemperatur",
+                    "from": "2452246",
+                    "value": "10",
+                    "unit": "°C",
+					"type": "number",
+					"format": "N2"
+                },
+                {
+                    "sq": 2,
+                    "name": "Green",
+                    "label": "A Heizung",
+                    "from": "2452246",
+                    "value": "TOGGLE",
+					"invert": true,
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 3,
+                    "name": "Red",
+                    "label": "B Entladung",
+                    "from": "2452246",
+                    "value": "TOGGLE",
+					"invert": true,
+                    "unit": "",
+                    "format": "sToggle"
+                }
+            ]
+        },
+		{
+			"name": "Helligkeit",
+			"data": [
+				{
+					"sq": 1,
+					"name": "Light Sensor",
+					"from": "2452246",
+                    "value": "",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 100,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "silver"
+				}
+			]
+		}
+    ]
+}

@@ -1,0 +1,102 @@
+{
+	"name": "Holzheizung Ljig",
+	"filename": "woodheating",
+	"size": {
+		"rows": 8,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 7,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Holzheizung",
+			"js": "",
+			"size": {
+				"rows": "8",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name":   "Temp 2871F607B6013CB9",
+					"label":  "Kessel",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name":   "Temp 28FFB80C801704AA",
+					"label":  "Umgebung",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name":   "Temp 2852C107B6013C83",
+					"label":  "Vorlauf",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name":   "Temp 28FF3009801704DE",
+					"label":  "Rücklauf",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name":   "Difference",
+					"label":  "Unterschied",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name":   "Power",
+					"label":  "Leistung",
+					"from":   "2452246",
+					"value":  "",
+					"unit":   "kW",
+					"format": "n3_1"
+				},
+				{
+					"sq": 7,
+					"label":  "Umw.-Pumpe",
+					"name":   "Pumpe",
+					"from":   "2452246",
+					"value":  "OFF",
+					"unit":   "",
+					"format": "sToggle"
+				},
+				{
+					"sq": 8,
+					"label":  "Licht",
+					"name":   "Licht Heizung",
+					"from":   "2452246",
+					"value":  "OFF",
+					"unit":   "",
+					"format": "sToggle"
+				}
+			]
+		}
+	]
+}

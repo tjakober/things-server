@@ -1,0 +1,48 @@
+{
+	"name": "Light Workplace Winterthur",
+	"filename": "Light_Workplace_Winterthur",
+	"size": {
+		"rows": 3,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 4
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Winterthur",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": 1,
+					"label": "Arbeitsplatz",
+					"name": "LED 1 PWM",
+					"from": "13455377",
+					"value": "20",
+					"unit": "%",
+					"format": "R0,100"
+				},
+				{
+					"sq": 2,
+					"label": "Licht",
+					"name": "Rotary Switch",
+					"from": "13455377",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				}
+				
+			]
+		}
+	]
+}

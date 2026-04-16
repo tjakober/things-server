@@ -1,0 +1,109 @@
+{
+	"name": "Lichtschalter2",
+	"filename": "lichtschalter2",
+	"size": {
+		"rows": 6,
+		"cols": 6,
+		"panels": 400
+	},
+	"pos": {
+		"left": 3,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Lichtschalter",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": 1,
+					"label": "Licht Treppe",
+					"name": "Licht",
+					"from": "2452246",
+					"value": "TOGGLE",
+					"unit": "",
+					"format": "sToggle"
+				},
+				{
+					"sq": "2",
+					"label": "Helligkeit",
+					"name": "Helligkeit",
+					"from": "2452246",
+					"value": "",
+					"unit": "%",
+					"format": "N3_1",
+					"field": "value"
+				},
+				{
+					"sq": "3",
+					"label": "Licht ab",
+					"name": "Helligkeit",
+					"from": "2452246",
+					"value": "",
+					"unit": "%",
+					"format": "N3_1",
+					"field": "level"
+				},
+				{
+					"sq": "4",
+					"label": "Dauer",
+					"name": "Radar",
+					"from": "2452246",
+					"value": "",
+					"unit": "min",
+					"format": "N3_1",
+					"field": "duration"
+				},
+				{
+					"sq": "5",
+					"label": "Timer Restzeit",
+					"name": "Random",
+					"from": "2452246",
+					"value": "",
+					"unit": "min",
+					"format": "N3_1",
+					"field": "value"
+				},
+				{
+					"sq": "6",
+					"label": "Random bis",
+					"name": "Random",
+					"from": "2452246",
+					"value": "",
+					"unit": "Uhr",
+					"format": "N3_1",
+					"field": "duration"
+				},
+				{
+					"sq": "7",
+					"label": "Random min",
+					"name": "Random",
+					"from": "2452246",
+					"value": "",
+					"unit": "min",
+					"format": "N3_1",
+					"field": "min"
+				},
+				{
+					"sq": "8",
+					"label": "Random max",
+					"name": "Random",
+					"from": "2452246",
+					"value": "",
+					"unit": "min",
+					"format": "N3_1",
+					"field": "max"
+				}
+			]
+		}
+	]
+}

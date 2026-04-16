@@ -1,0 +1,37 @@
+{
+	"name": "Büro Winterthur",
+	"filename": "light_siemens_wthur",
+	"size": {
+		"rows": 7,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 7,
+		"top": 7
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Büro Winterthur",
+			"data": [
+				{
+					"sq": 1,
+					"name": "Light Sensor",
+					"from": "11682725",
+					"value": "",
+					"size": "auto",
+					"low": 0,
+					"high": 100,
+					"scale_steps": 5,
+					"scale_div": 1,
+					"scale_subdiv": 3,
+					"munit": "V",
+					"type": "ammeter_siemens",
+					"js": "vmeter.js"
+				}
+			]
+		}
+	],
+	"index": "8"
+}

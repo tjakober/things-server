@@ -1,0 +1,204 @@
+{
+    "name": "Garden",
+    "filename": "garten_t_all",
+    "size": {
+        "rows": 23,
+        "cols": 9
+    },
+    "pos": {
+        "left": 0,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "T Side",
+            "js": "",
+            "data": [
+                {
+                    "sq": 1,
+                    "name": "t-moisture",
+                    "from": "miyo",
+                    "label": "Moisture",
+                    "value": 0,
+                    "unit": "%",
+                    "format": "n3"
+                },
+                {
+                    "sq": 2,
+                    "name": "t-temperature",
+                    "from": "miyo",
+                    "label": "Temperature",
+                    "value": 0,
+                    "unit": "°",
+                    "format": "n3"
+                },
+                {
+                    "sq": 3,
+                    "name": "t-brightness",
+                    "from": "miyo",
+                    "label": "Brightness",
+                    "value": 0,
+                    "unit": "Lux",
+                    "format": "n4"
+                },
+                {
+                    "sq": 4,
+                    "name": "t-solarVoltage",
+                    "from": "miyo",
+                    "label": "Solar-Voltage",
+                    "value": 0,
+                    "unit": "V",
+                    "format": "n1.2"
+                },
+                {
+                    "sq": 5,
+                    "name": "t-irrigationNecessary",
+                    "from": "miyo",
+                    "label": "Irrigate?",
+                    "value": 0,
+                    "format": "ired"
+                },
+                {
+                    "sq": 6,
+                    "name": "t-valve",
+                    "from": "miyo",
+                    "label": "Irrigation",
+                    "value": "TOGGLE",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 7,
+                    "name": "t-sensor-reachable",
+                    "from": "miyo",
+                    "label": "Sensor OK",
+                    "value": 0,
+                    "format": "igreen"
+                },
+                {
+                    "sq": 8,
+                    "name": "t-valve-reachable",
+                    "from": "miyo",
+                    "label": "Valve OK",
+                    "value": 0,
+                    "format": "igreen"
+                }
+            ]
+        },{
+			"name": "Moisture",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-moisture",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": 0,
+				  "high": 100,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "%",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		},{
+			"name": "Solar Voltage Sensor",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-solarVoltage",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": 0,
+				  "high": 5,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "V",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		},{
+			"name": "Brightness Sensor",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-brightness",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": 0,
+				  "high": 20,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "kL",
+				  "function": "panel.div1000",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		},{
+			"name": "rssi Sensor",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-rssi",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": -200,
+				  "high": 0,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "dB",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		},{
+			"name": "Solar Voltage Valve",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-valve-solarVoltage",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": 0,
+				  "high": 5,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "V",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		},{
+			"name": "rssi Valve",
+			"data": [
+				{
+				  "sq": 1,
+				  "name": "t-valve-rssi",
+				  "from": "miyo",
+				  "value": "",
+				  "size": "auto",
+				  "low": -200,
+				  "high": 0,
+				  "scale_steps": 5,
+				  "scale_div": 1,
+				  "scale_subdiv": 3,
+				  "munit": "dB",
+				  "type": "bargraph_black",
+				  "js": "hormeter.js"
+				}
+		    ]
+		}
+	]
+}

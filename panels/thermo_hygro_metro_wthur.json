@@ -1,0 +1,47 @@
+{
+    "name": "Thermo/Hygro",
+    "filename": "thermo_hygro_metro_wthur",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Winterthur",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "",
+                    "cover": 1,
+                    "name": "Temp 281BC1570000000C",
+                    "from": "2338011",
+                    "value": 0,
+                    "type": "thermo_hygro_metro_thermo",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                },{
+                    "sq": 2,
+                    "label": "",
+                    "cover": 2,
+                    "name": "Air Humidity",
+                    "from": "2338011",
+                    "value": 0,
+                    "type": "thermo_hygro_metro_hygro",
+                    "size": "auto",
+                    "js": "vmeter.js"
+                }]
+        }
+	]
+}

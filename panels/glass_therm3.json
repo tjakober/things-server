@@ -1,0 +1,64 @@
+{
+    "name": "Glass Thermometer",
+    "filename": "glass_therm3",
+    "size": {
+        "rows": 7,
+        "cols": 8,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Temperaturen",
+            "size": {
+                "rows": 7,
+                "cols": 6
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "Innen",
+                    "name": "Temp 28086107B6013C51",
+                    "from": "2452246",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "red",
+                    "type": "goldcap",
+                    "js": "tmeter.js"
+                },{
+                    "sq": 2,
+                    "label": "Aussen",
+                    "name": "Temp 28EE0B372E1601E2",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "red",
+                    "type": "bronzecap",
+                    "js": "tmeter.js"
+                },{
+                    "sq": 3,
+                    "label": "Keller",
+                    "name": "Temp 28EEDEA22C1602A3",
+                    "from": "11683232",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "red",
+                    "type": "goldcap",
+                    "js": "tmeter.js"
+                }
+            ]
+        }
+    ]            
+}

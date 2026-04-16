@@ -1,0 +1,35 @@
+{
+  "name": "testmeter",
+  "filename": "testvmeter",
+  "size": {
+    "rows": 8,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Test",
+      "data": [
+        {
+          "sq": 1,
+          "name": "Temp 28FFD60480170405",
+          "from": "2316356",
+          "value": "",
+          "size": "auto",
+          "low": 0,
+          "high": 40,
+          "scale_steps": 5,
+          "scale_div": 1,
+          "scale_subdiv": 2,
+          "munit": "VOLTS",
+          "type": "h_w_sullivan_meter",
+          "js": "vmeter.js"
+        }
+      ]
+    }
+  ]
+}

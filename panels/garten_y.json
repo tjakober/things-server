@@ -1,0 +1,89 @@
+{
+    "name": "Garten",
+    "filename": "garten_y",
+    "size": {
+        "rows": 6,
+        "cols": 7
+    },
+    "pos": {
+        "left": 0,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Y Side",
+            "js": "",
+            "data": [
+                {
+                    "sq": 1,
+                    "name": "y-moisture",
+                    "from": "miyo",
+                    "label": "Feuchtigkeit",
+                    "value": 0,
+                    "unit": "%",
+                    "format": "n3"
+                },
+                {
+                    "sq": 2,
+                    "name": "y-temperature",
+                    "from": "miyo",
+                    "label": "Temperatur",
+                    "value": 0,
+                    "unit": "°",
+                    "format": "n3"
+                },
+                {
+                    "sq": 3,
+                    "name": "y-brightness",
+                    "from": "miyo",
+                    "label": "Helligkeit",
+                    "value": 0,
+                    "unit": "Lux",
+                    "format": "n4"
+                },
+                {
+                    "sq": 4,
+                    "name": "y-solarVoltage",
+                    "from": "miyo",
+                    "label": "Solar-V",
+                    "value": 0,
+                    "unit": "V",
+                    "format": "n1.2"
+                },
+                {
+                    "sq": 5,
+                    "name": "y-irrigationNecessary",
+                    "from": "miyo",
+                    "label": "Wässern?",
+                    "value": 0,
+                    "format": "ired"
+                },
+                {
+                    "sq": 6,
+                    "name": "y-valve",
+                    "from": "miyo",
+                    "label": "Wässern",
+                    "value": "TOGGLE",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 7,
+                    "name": "y-sensor-reachable",
+                    "from": "miyo",
+                    "label": "Sensor OK",
+                    "value": 0,
+                    "format": "igreen"
+                },
+                {
+                    "sq": 8,
+                    "name": "y-valve-reachable",
+                    "from": "miyo",
+                    "label": "Ventil OK",
+                    "value": 0,
+                    "format": "igreen"
+                }
+            ]
+        }
+    ]
+}

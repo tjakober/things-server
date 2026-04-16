@@ -1,0 +1,35 @@
+{
+  "name": "Garten T",
+  "filename": "garden_t_solar_v",
+  "size": {
+    "rows": 8,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Solar Voltage",
+      "data": [
+        {
+          "sq": 1,
+          "name": "t-solarVoltage",
+          "from": "miyo",
+          "value": "",
+          "size": "auto",
+          "low": 0,
+          "high": 5,
+          "scale_steps": 5,
+          "scale_div": 1,
+          "scale_subdiv": 3,
+          "munit": "V",
+          "type": "ammeter_siemens",
+          "js": "vmeter.js"
+        }
+      ]
+    }
+  ]
+}

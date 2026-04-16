@@ -1,0 +1,54 @@
+{
+    "name": "Heizung Chems",
+    "filename": "heizung_chems",
+    "size": {
+        "rows": 13,
+        "cols": 14,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "groups": [
+        {
+            "name": "Anzeige",
+            "data": [
+                {
+                    "sq": 1,
+                    "label": "Soll",
+                    "name": "temperature",
+                    "from": "2452246",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 40,
+                    "low": -10,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+                    "pointer_color": "red",
+                    "munit": "°C",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                },
+                {
+                    "sq": 2,
+                    "label": "Ist",
+                    "name": "Temp 28FFB80C801704AA",
+                    "from": "2452246",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 40,
+                    "low": -10,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+                    "pointer_color": "red",
+                    "munit": "°C",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                }
+            ]
+        }
+    ]
+}

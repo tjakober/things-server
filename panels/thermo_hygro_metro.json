@@ -1,0 +1,48 @@
+{
+    "name": "Thermo/Hygro",
+    "filename": "thermo_hygro_metro",
+    "size": {
+        "rows": 11,
+        "cols": 9,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Chalet Chems",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [
+				{
+					"sq": 1,
+					"name": "Temp 28EDE556B5013CF4",
+					"cover": 1,
+					"from": "5782556",
+					"value": 0,
+					"size": "auto",
+					"type": "thermo_hygro_metro_thermo",
+					"js": "vmeter.js"
+				},
+				{				
+                    "sq": 2,
+                    "name": "Air Humidity",
+					"cover": 2,
+                    "from": "5782556",
+                    "value": 0,
+                    "size": "auto",
+                    "type": "thermo_hygro_metro_hygro",
+					"js": "vmeter.js"
+                }
+			]
+        }
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"name": "Werkstatt Ljig",
+	"filename": "duallineswitch",
+	"size": {
+		"rows": 3,
+		"cols": 6,
+		"panels": 400
+	},
+	"pos": {
+		"left": 3,
+		"top": 4
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Steckdosen",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": 1,
+					"label": "3D-Drucker",
+					"name": "Toggle Switch 1",
+					"from": "5097351",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				},
+				{
+					"sq": 2,
+					"label": "Reserve",
+					"name": "Toggle Switch 2",
+					"from": "5097351",
+					"value": "OFF",
+					"unit": "",
+					"format": "sToggle"
+				}
+			]
+		}
+	]
+}

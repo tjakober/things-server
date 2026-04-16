@@ -1,0 +1,34 @@
+{
+    "name": "Hygrometer analog",
+    "filename": "hygro_meyrowitz_ljig_w",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Ljig Werkstatt",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "name": "Air Humidity",
+                    "from": "9378291",
+                    "value": 0,
+                    "size": "auto",
+                    "type": "hygro_meyrowitz",
+					"js": "vmeter.js"
+                }]
+        }]
+}

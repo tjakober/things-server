@@ -1,0 +1,106 @@
+{
+    "name": "Helligkeit",
+    "filename": "helligkeit",
+    "size": {
+        "rows": 13,
+        "cols": 14,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+		{
+            "name": "Temperaturen",
+            "data": [
+				{
+					"sq": 3,
+					"label": "Ljig",
+					"name": "Light Sensor",
+					"from": "2271108",
+					"value": 0,
+					"height": "auto",
+					"high": 100,
+					"low": 0,
+					"scale_steps": 5,
+					"scale_div": 10,
+					"scale_subdiv": 5,
+					"pointer_color": "red",
+					"munit": "°C",
+					"type": "gray",
+					"js": "vermeter.js"
+				},
+				{
+					"sq": 3,
+					"label": "W'thur",
+					"name": "Light Sensor",
+					"from": "11682725",
+					"value": 0,
+					"height": "auto",
+					"high": 100,
+					"low": 0,
+					"scale_steps": 5,
+					"scale_div": 10,
+					"scale_subdiv": 5,
+					"pointer_color": "red",
+					"munit": "°C",
+					"type": "gray",
+					"js": "vermeter.js"
+				},
+				{
+					"sq": 3,
+					"label": "W'garten",
+					"name": "Light Sensor",
+					"from": "7074856",
+					"value": 0,
+					"height": "auto",
+					"high": 100,
+					"low": 0,
+					"scale_steps": 5,
+					"scale_div": 10,
+					"scale_subdiv": 5,
+					"pointer_color": "red",
+					"munit": "°C",
+					"type": "gray",
+					"js": "vermeter.js"
+				},
+				{
+					"sq": 3,
+					"label": "T-Side",
+					"name": "t-solarVoltage",
+					"from": "miyo",
+					"value": 0,
+					"height": "auto",
+					"high": 5,
+					"low": 0,
+					"scale_steps": 5,
+					"scale_div": 1,
+					"scale_subdiv": 3,
+					"pointer_color": "red",
+					"munit": "V",
+					"type": "gray",
+					"js": "vermeter.js"
+				},
+				{
+					"sq": 3,
+					"label": "Y-Side",
+					"name": "y-solarVoltage",
+					"from": "miyo",
+					"value": 0,
+					"height": "auto",
+					"high": 5,
+					"low": 0,
+					"scale_steps": 5,
+					"scale_div": 1,
+					"scale_subdiv": 3,
+					"pointer_color": "red",
+					"munit": "V",
+					"type": "gray",
+					"js": "vermeter.js"
+				}
+			]
+		}
+	]     
+}

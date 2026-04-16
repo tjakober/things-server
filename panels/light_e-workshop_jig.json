@@ -1,0 +1,97 @@
+{
+    "name": "E-Werkst. Ljig",
+    "filename": "light_e-workshop_jig",
+    "size": {
+        "rows": "4",
+        "cols": "6"
+    },
+    "pos": {
+        "left": "2",
+        "top": "3"
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Licht E-Werkstatt Ljig",
+            "size": {
+                "rows": "4",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [
+                {
+                    "sq": 1,
+                    "label": "Hauptlicht",
+                    "name": "Main Light",
+                    "from": "6985234",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 2,
+                    "label": "Sensorlicht",
+                    "name": "Sensor Light",
+                    "from": "6985234",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 3,
+                    "label": "Steckdose Rot",
+                    "name": "Toggle Switch 1",
+                    "from": "5097351",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                },
+                {
+                    "sq": 4,
+                    "label": "Steckdose Grün",
+                    "name": "Toggle Switch 2",
+                    "from": "5097351",
+                    "value": "OFF",
+                    "unit": "",
+                    "format": "sToggle"
+                }
+                
+            ]
+        },
+        {
+			"name": "Filament Kiste",
+            "js": "",
+            "size": {
+                "rows": "3",
+                "cols": "2"
+            },
+            "pos": {
+                "top": "3",
+                "left": "0"
+            },
+			"data": [
+				{
+					"sq": "1",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2009069",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name":   "Temp 281A9358000000B7",
+					"label":  "Umgebung",
+					"from":   "2009069",
+					"value":  "",
+					"unit":   "°C",
+					"format": "n3_1"
+				}
+            ]
+        }
+    ]
+}

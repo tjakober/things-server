@@ -1,0 +1,52 @@
+{
+	"name": "Barometer",
+	"filename": "baro_eng_beogr",
+	"size": {
+		"rows": 7,
+		"cols": 6,
+		"panels": 300
+	},
+	"pos": {
+		"left": 10,
+		"top": 0
+	},
+	"css": "css/baro_eng.css",
+	"groups": [
+		{
+			"name": "Beograd",
+			"size": {
+				"rows": 7,
+				"cols": 6
+			},
+			"pos": {
+				"top": 0,
+				"left": 0
+			},
+			"data": [
+				{
+					"sq": 1,
+					"label": "",
+                    "name": "Air Pressure",
+                    "from": "2316356",
+                    "value": 0,
+					"size": "auto",
+					"cover": 1,
+					"type": "baro_eng",
+					"js": "vmeter.js"
+				},
+                {
+                    "sq": 2,
+                    "label": "",
+                    "name": "Air Pressure",
+                    "from": "2316356",
+					"size": "auto",
+                    "cover": 2,
+					"field": "p24h",
+                    "function": "panel.hourbefore",
+					"type": "baro_eng_cur",
+					"js": "vmeter.js"
+                }
+			]
+		}
+	]
+}

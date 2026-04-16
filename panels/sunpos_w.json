@@ -1,0 +1,30 @@
+{
+    "name": "Sonnenstand",
+    "filename": "sunpos_w",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Winterthur",
+            "data": [
+                {
+                    "sq": 1,
+					"name": "winterthur",
+                    "size": "auto",
+                    "type": "standard",
+					"lat": 47.51669956918327, 
+					"lon": 8.680106801688114,
+					"UTCOffset": 1,
+                    "js": "sunpos.js"
+                }
+            ]
+        }
+    ]
+}

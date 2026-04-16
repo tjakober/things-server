@@ -1,0 +1,134 @@
+{
+	"name": "Barometers",
+	"filename": "barometers",
+	"size": {
+		"rows": 11,
+		"cols": 7,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Barometer Weiss",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Temperature",
+					"label": "Temperatur",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "1",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "8367689",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "2",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "8367689",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temp 28AEDB56B5013CFE",
+					"label": "Intern",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FF1607B6013C9A",
+					"label": "Innen",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 28FF600A801704C3",
+					"label": "Aussen",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Barometer Offen",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "4",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Temperature",
+					"label": "Temperatur",
+					"from": "5782556",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "5782556",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "5782556",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temp 28EDE556B5013CF4",
+					"label": "Temp. Innen",
+					"from": "5782556",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		}
+	]
+}

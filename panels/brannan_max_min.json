@@ -1,0 +1,65 @@
+{
+    "name": "Brannan max min",
+    "filename": "brannan_max_min",
+    "size": {
+        "rows": 7,
+        "cols": 6,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Test Brannan",
+            "size": {
+                "rows": 3,
+                "cols": 3
+            },
+            "pos": {
+                "top": 0,
+                "left": 0
+            },
+            "data": [{
+                    "sq": 1,
+                    "name": "Temp 28FF47088017046D",
+                    "from": "2338011",
+                    "value": 0,
+                    "cover": 1,
+                    "size": "auto",
+                    "type": "brannan_max_min_thermo",
+					"js": "vmeter.js"
+				},
+				{
+					"sq": 2,
+					"name": "qMin24:Temp 28FF47088017046D",
+					"from": "STATSSERVER",
+					"value": "",
+					"cover": 2,
+					"size": "auto",
+					"type": "brannan_max_min_min",
+					"js": "vmeter.js"
+				},
+				{
+					"sq": 2,
+					"name": "qMax24:Temp 28FF47088017046D",
+					"from": "STATSSERVER",
+					"value": "",
+					"cover": 3,
+					"size": "auto",
+					"type": "brannan_max_min_max",
+					"js": "vmeter.js"
+				},
+				{
+                    "sq": 4,
+                    "name": "Air Humidity",
+                    "from": "2338011",
+                    "value": 0,
+                    "cover": 4,
+                    "size": "auto",
+                    "type": "brannan_max_min_hygro",
+					"js": "vmeter.js"
+                }]
+        }]
+}

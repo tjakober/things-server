@@ -1,0 +1,84 @@
+{
+    "name": "Thermometer",
+    "filename": "glass_therm_3_gray",
+    "size": {
+        "rows": 7,
+        "cols": 8
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "groups": [
+		{
+            "name": "Aussentemperatur",
+            "data": [
+				{
+                    "sq": 1,
+                    "label": "Ljig",
+                    "name": "Temp 28086107B6013C51",
+                    "from": "2271259",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+                    "pointer_color": "red",
+                    "munit": "°C",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                },{
+                    "sq": 2,
+                    "label": "Beograd",
+                    "name": "Temp 28FF3E13801605C5",
+                    "from": "2316356",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+                    "pointer_color": "red",
+                    "munit": "°C",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                },{
+                    "sq": 3,
+                    "label": "W'thur",
+                    "name": "Temp 281BC1570000000C",
+                    "from": "2338011",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+                    "munit": "°C",
+                    "pointer_color": "red",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                },{
+                    "sq": 4,
+					"label": "Chems",
+                    "name": "Temp 28FF1607B6013C9A",
+                    "from": "8367689",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+                    "munit": "°C",
+                    "pointer_color": "red",
+                    "type": "gray",
+                    "js": "vermeter.js"
+                }
+            ]
+        }
+    ]            
+}

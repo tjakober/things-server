@@ -1,0 +1,95 @@
+{
+    "name": "Vermeter Thermometer",
+    "filename": "vermeter_therm3",
+    "size": {
+        "rows": 13,
+        "cols": 14,
+        "panels": 300
+    },
+    "pos": {
+        "left": 10,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Temperaturen",
+            "data": [{
+                    "sq": 1,
+                    "label": "Innen",
+                    "name": "Temp 28FFCE9871170311",
+                    "from": "2338011",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "red",
+                    "type": "goldcap",
+                    "js": "vermeter.js"
+                },{
+                    "sq": 2,
+                    "label": "Aussen",
+                    "name": "Temp 28FF47088017046D",
+                    "from": "2338011",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "mcolor": "red",
+                    "type": "bronzecap",
+                    "js": "vermeter.js"
+                },{
+                    "sq": 3,
+                    "label": "Keller",
+                    "name": "Temp 28EEF2B92C1602D6",
+                    "from": "13444461",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+					"pointer_color": "red",
+                    "mcolor": "red",
+					"munit": "°C",
+                    "type": "silver",
+                    "js": "vermeter.js"
+                },
+				{
+					"sq": 3,
+					"label": "Innen",
+                    "name": "Temp 28FF7FC3711703DF",
+                    "from": "2338011",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 50,
+                    "low": -40,
+                    "scale_steps": 9,
+                    "scale_div": 18,
+                    "scale_subdiv": 5,
+					"pointer_color": "red",
+                    "munit": "°C",
+					"type": "gray",
+					"js": "vermeter.js"
+				},
+				{
+					"sq": 4,
+					"label": "Dial",
+                    "name": "Temp 28FF7FC3711703DF",
+                    "from": "2338011",
+                    "value": 0,
+                    "height": "auto",
+                    "high": 180,
+                    "low": 0,
+                    "scale_steps": 5,
+                    "scale_div": 10,
+                    "scale_subdiv": 5,
+					"pointer_color": "green",
+                    "munit": "%",
+					"type": "black",
+					"js": "vermeter.js"
+				}
+            ]
+        }
+    ]            
+}

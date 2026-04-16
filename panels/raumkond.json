@@ -1,0 +1,319 @@
+{
+	"name": "Raumkonditionen",
+	"filename": "raumkond",
+	"size": {
+		"rows": 11,
+		"cols": 7,
+		"panels": 300
+	},
+	"pos": {
+		"left": 0,
+		"top": 0
+	},
+	"css": "",
+	"groups": [
+		{
+			"name": "Barometer Ljig",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "0",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "2271259",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "1a",
+					"name": "Air Pressure",
+					"label": "Höhe ü.M.",
+					"from": "2271259",
+					"value": "",
+					"field": "altitude",
+					"unit": "m",
+					"format": "n4_1"
+				},
+				{
+					"sq": "2",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2271259",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temp 28FF003180160349",
+					"label": "Radiator",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 289A1956B5013C6E",
+					"label": "Wohnzimmer",
+					"from": "11682485",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 28FF500880170440",
+					"label": "Büro",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name": "Temp 2888BC07B6013C09",
+					"label": "Werkstatt",
+					"from": "6985234",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "7",
+					"name": "Temp 28086107B6013C51",
+					"label": "Aussen",
+					"from": "2271259",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Barometer Beograd",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "4",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "2316356",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "1a",
+					"name": "Air Pressure",
+					"label": "Höhe ü.M.",
+					"from": "2316356",
+					"value": "",
+					"field": "altitude",
+					"unit": "m",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2316356",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "3",
+					"name": "Temp 28FFD60480170405",
+					"label": "Temp. Innen",
+					"from": "2316356",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FF3E13801605C5",
+					"label": "Temp. Aussen",
+					"from": "2316356",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Barometer Winterthur",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "8",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "2338011",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "1a",
+					"name": "Air Pressure",
+					"label": "Höhe ü.M.",
+					"from": "2338011",
+					"value": "",
+					"field": "altitude",
+					"unit": "m",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "2338011",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FFCE9871170311",
+					"label": "Büro",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 286954BA0000004B",
+					"label": "Schlafzimmer",
+					"from": "13444828",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name": "Temp 28FF7FC3711703DF",
+					"label": "Switch",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+                    "sq": "7",
+                    "name": "Temp 28BAF656B5013C6D",
+                    "label": "Wintergarten",
+                    "from": "11682522",
+                    "value": "",
+                    "unit": "°C",
+                    "format": "n3_1"
+                },
+				{
+					"sq": "8",
+					"name": "Temp 281BC1570000000C",
+					"label": "Aussen",
+					"from": "2338011",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		},
+		{
+			"name": "Chalet Chems Grächen",
+			"js": "",
+			"size": {
+				"rows": "3",
+				"cols": "3"
+			},
+			"pos": {
+				"top": "8",
+				"left": "0"
+			},
+			"data": [
+				{
+					"sq": "1",
+					"name": "Air Pressure",
+					"label": "Luftdruck",
+					"from": "8367689",
+					"value": "",
+					"unit": "hPa",
+					"format": "n4_1"
+				},
+				{
+					"sq": "2",
+					"name": "Air Pressure",
+					"label": "Höhe ü.M.",
+					"from": "8367689",
+					"value": "",
+					"field": "altitude",
+					"unit": "m",
+					"format": "n4_1"
+				},
+				{
+					"sq": "3",
+					"name": "Air Humidity",
+					"label": "Luftfeuchtigkeit",
+					"from": "8367689",
+					"value": "",
+					"unit": "%",
+					"format": "n3_1"
+				},
+				{
+					"sq": "4",
+					"name": "Temp 28FF600A801704C3",
+					"label": "Wohnzimmer",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "5",
+					"name": "Temp 281E815800000094",
+					"label": "Büro",
+					"from": "13445289",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				},
+				{
+					"sq": "6",
+					"name": "Temp 28FF1607B6013C9A",
+					"label": "Aussen",
+					"from": "8367689",
+					"value": "",
+					"unit": "°C",
+					"format": "n3_1"
+				}
+			]
+		}
+	]
+}

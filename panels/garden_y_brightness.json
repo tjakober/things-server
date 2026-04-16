@@ -1,0 +1,36 @@
+{
+  "name": "Garten Y",
+  "filename": "garden_y_brightness",
+  "size": {
+    "rows": 8,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Brightness",
+      "data": [
+        {
+          "sq": 1,
+          "name": "y-brightness",
+          "from": "miyo",
+          "value": "",
+          "size": "auto",
+          "low": 0,
+          "high": 50,
+          "scale_steps": 5,
+          "scale_div": 1,
+          "scale_subdiv": 3,
+		  "function": "panel.div1000",
+          "munit": "kLux",
+          "type": "mameter1",
+          "js": "vmeter.js"
+        }
+      ]
+    }
+  ]
+}

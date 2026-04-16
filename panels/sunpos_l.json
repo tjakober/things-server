@@ -1,0 +1,30 @@
+{
+    "name": "Sonnenstand",
+    "filename": "sunpos_l",
+    "size": {
+        "rows": 8,
+        "cols": 7
+    },
+    "pos": {
+        "left": 1,
+        "top": 0
+    },
+    "css": "",
+    "groups": [
+        {
+            "name": "Ljig",
+            "data": [
+                {
+                    "sq": 1,
+					"name": "ljig",
+                    "size": "auto",
+                    "type": "standard",
+					"lat": 44.22262411007848,
+					"lon": 20.23999231668789,
+					"UTCOffset": 1,
+                    "js": "sunpos.js"
+                }
+            ]
+        }
+    ]
+}

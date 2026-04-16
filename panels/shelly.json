@@ -1,0 +1,40 @@
+{
+  "name": "Shelly",
+  "filename": "shelly",
+  "size": {
+    "rows": 4,
+    "cols": 7
+  },
+  "pos": {
+    "left": 0,
+    "top": 0
+  },
+  "css": "",
+  "groups": [
+    {
+      "name": "Shelly",
+      "data": 
+		[
+			{
+			  "sq": 1,
+			  "label": "Shelly switch",
+			  "name": "Main Light",
+			  "from": "2967207",
+			  "value": "OFF",
+			  "unit": "",
+			  "format": "sToggle"
+			},
+			{
+				"sq": 2,
+				"label": "Intensity",
+				"name": "Main Light",
+				"from": "2967207",
+				"value": 1,
+				"field": "intensity",
+				"para": "field",
+				"format": "R1,3"
+			}	
+		]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+    "name": "Reservoir",
+    "filename": "level",
+    "size": {
+        "rows": 4,
+        "cols": 4,
+        "panels": 400,
+        "panelWidth": 300
+    },
+    "pos": {
+        "left": 3,
+        "top": 0
+    },
+    "css": "",
+    "groups": [{
+            "name": "Level",
+            "js": "level.js",
+            "size": {
+                "rows": "3",
+                "cols": "3"
+            },
+            "pos": {
+                "top": "0",
+                "left": "0"
+            },
+            "data": [{
+                    "sq": 1,
+                    "label": "Füllstand",
+                    "name": "Level",
+                    "from": "4479108",
+                    "value": "0",
+                    "unit": "%",
+                    "format": "N3"
+                }, {
+                    "sq": 3,
+                    "name": "Level",
+                    "label": "Alarm max",
+                    "value": "0",
+                    "from": "4479108",
+                    "format": "N3",
+                    "field": "alarmUp",
+                    "unit": "%"
+                }, {
+                    "sq": 4,
+                    "name": "Level",
+                    "label": "Alarm min",
+                    "value": "0",
+                    "from": "4479108",
+                    "format": "N3",
+                    "field": "alarmDn",
+                    "unit": "%"
+                }, {
+                    "sq": 5,
+                    "name": "Air Pump",
+                    "label": "Messung",
+                    "from": "4479108",
+                    "value": "Off",
+                    "format": "pgreen"
+                }, {
+                    "sq": 6,
+                    "name": "Level",
+                    "label": "Interval",
+                    "from": "4479108",
+                    "value": "",
+                    "field": "interval",
+                    "format": "N3",
+                    "unit": "min"
+                }, {
+                    "sq": 10,
+                    "name": "Water Pump",
+                    "label": "Wasserpumpe",
+                    "from": "4479108",
+                    "value": "Off",
+                    "format": "ired"
+                }, {
+                    "sq": 11,
+                    "name": "Water Pump",
+                    "label": "Ein",
+                    "from": "4479108",
+                    "value": "",
+                    "field": "ontime",
+                    "format": "dDD.MM.YY HH:II:SS"
+                }, {
+                    "sq": 12,
+                    "name": "Water Pump",
+                    "label": "Aus",
+                    "from": "4479108",
+                    "value": "",
+                    "field": "offtime",
+                    "format": "dDD.MM.YY HH:II:SS"
+                }, {
+                    "sq": 13,
+                    "name": "Water Pump",
+                    "label": "Einschaltdauer",
+                    "from": "4479108",
+                    "value": "",
+                    "field": "duration",
+                    "unit": "sec",
+                    "format": "n6"
+                }]
+        },
+        {
+            "name": "Füllstand",
+            "data": [
+                {
+                    "label": "",
+                    "name": "Level",
+                    "from": "4479108",
+                    "value": "",
+                    "pointer_color": "red",
+                    "size": "auto",
+                    "low": 0,
+                    "high": 150,
+                    "scale_steps": 6,
+                    "scale_div": 6,
+                    "scale_subdiv": 5,
+                    "munit": "%",
+                    "js": "hormeter.js",
+                    "type": "black"
+                }
+            ]
+        }
+	]
+}
