@@ -16,8 +16,8 @@
       "data": [
         {
           "sq": 1,
-          "name": "Temp 28FFD60480170405",
-          "from": "2316356",
+          "name": "Temperature",
+          "from": "11683232",
           "value": "",
           "size": "auto",
           "low": 0,

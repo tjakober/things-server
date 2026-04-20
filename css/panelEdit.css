@@ -1,0 +1,254 @@
+/* =============================================
+   Panel Editor
+   ============================================= */
+
+/* Disabled menu tab */
+#menu li.tab-disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Container */
+#m_panelEdit {
+    display: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+#m_panelEdit.pe-container {
+    display: flex;
+    height: calc(100vh - 52px);
+    overflow: hidden;
+}
+
+/* ── Sidebar ─────────────────────────────── */
+.pe-sidebar {
+    width: 190px;
+    min-width: 190px;
+    border-right: 1px solid #ccc;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 6px;
+    overflow: hidden;
+}
+.pe-sidebar-title {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 2px 0 4px;
+    border-bottom: 1px solid #ddd;
+}
+.pe-panel-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.pe-panel-item {
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pe-panel-item:hover { background: #ddeeff; }
+.pe-panel-item.pe-active { background: #2196F3; color: white; border-color: #1565C0; }
+
+/* ── Main ────────────────────────────────── */
+.pe-main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 14px;
+    background: #fafafa;
+}
+
+/* ── Sections ────────────────────────────── */
+.pe-section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.pe-section-title {
+    background: #e8e8e8;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pe-section-title span { flex: 1; }
+
+/* ── Fields grid ─────────────────────────── */
+.pe-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 5px 20px;
+    padding: 8px 10px;
+}
+.pe-field-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 24px;
+}
+.pe-label {
+    min-width: 120px;
+    font-size: 12px;
+    color: #555;
+    flex-shrink: 0;
+}
+.pe-label.pe-optional { color: #999; }
+.pe-input {
+    flex: 1;
+    padding: 2px 5px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 12px;
+    min-width: 60px;
+}
+.pe-input:focus { border-color: #2196F3; outline: none; }
+.pe-input-sm {
+    width: 90px;
+    padding: 2px 5px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.pe-select {
+    padding: 2px 4px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 12px;
+    background: white;
+    max-width: 180px;
+}
+.pe-num-small {
+    width: 44px;
+    padding: 2px 4px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+}
+.pe-fmt-sub {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 6px;
+    flex-wrap: nowrap;
+}
+
+/* ── Buttons ─────────────────────────────── */
+.pe-btn {
+    padding: 3px 10px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    background: #f0f0f0;
+    white-space: nowrap;
+}
+.pe-btn:hover { background: #e0e0e0; }
+.pe-btn-new  { background: #4CAF50; color: white; border-color: #388E3C; width: 100%; margin-bottom: 2px; }
+.pe-btn-new:hover  { background: #388E3C; }
+.pe-btn-save { background: #2196F3; color: white; border-color: #1565C0; }
+.pe-btn-save:hover { background: #1565C0; }
+.pe-btn-del-panel { background: #f44336; color: white; border-color: #c62828; }
+.pe-btn-del-panel:hover { background: #c62828; }
+.pe-btn-add  { background: #E3F2FD; border-color: #90CAF9; color: #0D47A1; font-size: 11px; padding: 2px 7px; }
+.pe-btn-sm   { padding: 1px 5px; font-size: 11px; }
+.pe-btn-move { background: #fff; border-color: #ccc; }
+.pe-btn-rm   { background: #FFEBEE; border-color: #EF9A9A; color: #C62828; }
+
+/* ── Groups ──────────────────────────────── */
+.pe-groups-header {
+    background: #e8e8e8;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px 4px 0 0;
+}
+.pe-groups-header span { flex: 1; }
+.pe-group-list { padding: 6px; }
+
+.pe-group {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background: white;
+}
+.pe-group-hdr {
+    background: #EEF2FF;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+.pe-toggle { cursor: pointer; color: #666; user-select: none; font-size: 11px; }
+.pe-group-label { flex: 1; font-weight: 500; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pe-group-ctrls { display: flex; gap: 3px; }
+.pe-group-body { padding: 8px; }
+.pe-group-fields { background: #FAFAFE; border-radius: 3px; margin-bottom: 8px; }
+
+/* ── Data elements ───────────────────────── */
+.pe-data-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    padding: 3px 4px;
+    margin-bottom: 4px;
+    background: #F5F5F5;
+    border-radius: 3px;
+}
+.pe-elem {
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    background: white;
+}
+.pe-elem-hdr {
+    background: #F8F8F8;
+    padding: 3px 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+}
+.pe-elem-info { flex: 1; color: #666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
+.pe-elem-ctrls { display: flex; gap: 3px; }
+.pe-elem-body { padding: 6px 8px; }
+
+/* ── Actions bar ─────────────────────────── */
+.pe-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0 4px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 4px;
+}
+.pe-status {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+.pe-status-ok  { background: #C8E6C9; color: #1B5E20; }
+.pe-status-err { background: #FFCDD2; color: #B71C1C; }

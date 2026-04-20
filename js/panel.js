@@ -8,7 +8,7 @@
  *  
  *  Panel module for the Websocket Things Server
  */
-/* global ws, ut, panelEdit, Promise, scheduler */
+/* global ws, ut, panelEdit, settings, upLoad, listView, Promise, scheduler */
 
 /*
  * Display the top menu tabs
@@ -59,6 +59,14 @@ var menu = {
             dest: 'settings',
             refresh: false,
             renew: true
+        },
+        {
+            title: 'Panel Editor',
+            module: 'panelEdit',
+            active: false,
+            dest: 'panelEdit',
+            refresh: false,
+            renew: true
         }
     ],
     curTab: 0,
@@ -69,6 +77,7 @@ var menu = {
             $('<li/>')
                     .html(el.title)
                     .attr('disabled', !el.active)
+                    .toggleClass('tab-disabled', !el.active)
                     .click(function(){
                         menu.changeTab.call(this);
                     })
@@ -99,6 +108,7 @@ var menu = {
                 .appendTo('#content');
     },
     changeTab: function() {
+        if ($(this).hasClass('tab-disabled')) return;
         $('li', $(this).parent()).removeClass('sel');
         $(this).addClass('sel');
         $('#modules > div').hide();
@@ -202,6 +212,7 @@ var panel = {
                     }
                 }
                 scheduler.start();*/
+                panelEdit.enable();
                 if (cb) {
                     cb();
                 } else {
@@ -477,7 +488,7 @@ var panel = {
                 
             case 'i':
             case 'p':
-                /* Pusbutton works like indicator but can send a pulse massage when clicked.
+                /* Pusbutton works like indicator but can send a pulse message when clicked.
                  * Indicator is an indicator bulb which can be formatted with colour:
                  * the colour farmats are defined in the panel.css file
                  * currently the can be ired, igreen, iblue

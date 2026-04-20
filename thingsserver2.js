@@ -217,6 +217,14 @@ class Htmlsrv {
                 var fn = 'panels/config/' + oParams.get('fn').trim() + '.json';
                 this.delFile(fn, response);
                 break;
+            case 'savePanel':
+                var fn = 'panels/' + oParams.get('fn').trim() + '.json';
+                this.storeFile(fn, oParams.get('data'), response);
+                break;
+            case 'deletePanel':
+                var fn = 'panels/' + oParams.get('fn').trim() + '.json';
+                this.delFile(fn, response);
+                break;
             default:
                 log.it(1, this.m, `Unknown panel command: ${oParams.get('cmd')}`, 'Red');
         }
