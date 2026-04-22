@@ -1,16 +1,181 @@
- # things-server
-Server to communicate internet-of-things nodes with the browser.
-The server is based on nodejs and communicates via websocket between the "things" (ESP-8266 devices using Nodemcu and Lua) and a web-browser anywhere in the world. It uses JSON messages as a communication protocol. The Server is realized in javascript on nodejs using the npm module websockets/ws (Websocket server library from Ipinca). It caIn run under windows as well as any linux. I run it on a Raspberry Pi. If you want that it is reachable from outside your home, you must use the port forwarding on your router. You can also use DynDNS for your comfort. In config.json on the main folder you can set the port your server shall use and the credentials of your mailserver if your devices want to send you mails. to start your things-server open a console, go to your installation folder and enter "node thingsserver" it will prompt "thingsserver ready" and when a thing registers you will get console messages about what's going on. 
-## Principle of operation
-The browser acts as a control panel to display data from things which read sensors. There is a two-way communication. The things can send their data to the control panel as well as well as input elements on the control panel can send commands to the things. There can be multiple things communicating with multiple control panels. Every browser can configure its own collection of control panels.
-![Control Panel Example](/Docs/images/ThingsPanel.png)
-Each element within the panel is connected with a data service on a thing node. Thing nodes can have multiple sensors on it.  And each sensor can have multiple data services, input as well as output. The data services can be designed to deliver data upon request or on a regular or asynchronous basis.
-Thing nodes will register themself on the server upon startup, telling the available services to the server. The same do the control panels, they register the services they want to subscribe.
-During operation, the data records from the thing nodes will be transferred to all the control panels wich have rquested their service. That means that the same service can be used on multiple control panels e.g. on smartphones or computer screens at the same time. Let's make an example: A thing node is designed to switch on a room lamp somewhere. On a control panel there is a switch which can be clocked to switch on this lamp. The control panel sends a message to the server which in turn transfers this message to the thing which switches on the lamp. As response, the thing sends back the new state with a message to the server. The server now transfers this message to all the control panels who have subscribed to this service. This means that all panels on computers, tablets and smartphones indicate now that this lamp is switched on. If you switched on the lamp on the computer, you can now switch it off on the smartphone.
-## Thing nodes
-A thing node is a device that connects to the things-server via the websocket protocol. Since it is not a browser in can directly connect to the websocket server without the way over http. Here in the project I have used ESP-8266 under NODEMCU programmed with lua. This is not the only possibility, it can be any device capable to communicate via internet and websocket protocol.
-### Nodemcu
-The thing nodes connect to the wifi using a list of known routers. This simplify the development process to connect to the local router and then use it anywhere in the field witout modifying the connection credentials. To commulicate with the sensors ther is a central module called "transmit" which takes car of the registration with the server, initialisation of the sensors and multiplex the messages from an to the correct sensor LUA module. There can be multiple sensors on a thing node which are configured in the mConfig.lua. The currently available sensor modules you will find in the "Things" folder. It is advised to use LFS (Lua File Storage) and compile all the modules into the lfs.img. To do so, you can use the NodeMCU custom build-service at https://nodemcu-build.com/ Select the desired modules and donload it when you get the build mailed.
-To build a thing node I suggest to buy a "Wemos D1" board which is available on lot's of stores as well at aliexpress directly from china. To begin you can hook it on a solderless breadboard. You might want to install a switch between the pin D3 and ground. Upon start you will then be able to stop the execution of "init.lua" fron the "Things" folder that makes it easier to make changes to the software. To flash the software you can use the self-contained NodeMCU flasher with GUI downloadable at https://github.com/marcelstoer/nodemcu-pyflasher. When you have flashed the firmware it is time to build the LFS mentioned above. There is an online service to do that at https://blog.ellisons.org.uk/article/nodemcu/a-lua-cross-compile-web-service/ You modules in may want to use the LUA modules from the "Things" folder or build your own.
-## Web-Browser
-The things-server contains also a webserver and will execute index.html when you enter its address in the address line of the webbrowser. It will load the three javascript files panel.js, ut.js and ws.js. the jquery-ui-touch-punch is needed if you use the panel editor on a iPad. At first it will show you a empty page with a small menu. Go to settings and choose the panels you want by ticking the corresponding entry in the panel list. Of course you need thing nodes which send data to the server, without those nothing changes in the panels. There are several panel models supported such as simple name value lists, switches, indicators, measurement gauges, thermometers, barometers hygrometers. A panel is configured with a JSON file from the folder "panels". 
+# things-server
+
+A WebSocket-based server that connects **IoT devices** (ESP8266 nodes) with a **web browser** — accessible from anywhere in the world.
+
+> **Example:** A sensor node measures room temperature. The value appears in real time on your browser — on your phone, tablet, and computer simultaneously. A switch on the control panel turns a lamp on or off. All connected browsers update instantly.
+
+---
+
+> **Example:** Several Sensors and switches displayed in analog gauges on a display panel
+
+![Control Panel Example](images/controlpanel.png)
+
+---
+## How it works
+
+```
+[ESP8266 Thing Node] <--WebSocket--> [things-server] <--WebSocket--> [Web Browser]
+```
+
+- **Thing nodes** (ESP8266 devices) register themselves on the server and publish their available services (sensors, switches, etc.)
+- **Browser control panels** subscribe to the services they want to display
+- The server routes messages between nodes and all subscribed panels in real time
+- Multiple browsers can subscribe to the same service — all stay in sync
+
+---
+
+## Features
+
+- Two-way communication: sensors send data *to* the browser; the browser sends commands *to* the devices
+- Multiple thing nodes and multiple control panels can run simultaneously
+- Each browser can configure its own collection of panels
+- Supported panel types: value lists, switches, indicators, gauges, thermometers, barometers, hygrometers
+- Works on Windows and Linux (tested on Raspberry Pi)
+- Reachable from outside your home network via port forwarding / DynDNS
+
+---
+
+## Requirements
+
+- [Node.js](https://nodejs.org/) (v12 or newer recommended)
+- npm (comes with Node.js)
+- A router with port forwarding if you want external access (optional)
+
+---
+
+## Quick Start
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/things-server.git
+cd things-server
+
+# 2. Install dependencies
+npm install
+
+# 3. Configure the server (port, optional mail settings)
+#    Edit config.json in the main folder
+
+# 4. Start the server
+node thingsserver2
+```
+
+You should see:
+```
+thingsserver ready
+```
+
+Open a browser and go to `http://your-server-ip:PORT` to open the control panel.
+
+---
+
+## Configuration
+
+Edit `config.json` in the main folder:
+
+```json
+{
+  "port": 8081,
+  "mail": {
+    "host": "smtp.your-provider.com",
+    "user": "your@email.com",
+    "password": "yourpassword"
+  }
+}
+```
+
+| Key | Description |
+|-----|-------------|
+| `port` | Port the server listens on |
+| `mail` | SMTP credentials for email notifications from thing nodes (optional) |
+
+---
+
+## Thing Nodes (ESP8266 / NodeMCU)
+
+### Hardware
+
+A recommended starting point is the **Wemos D1 mini** board, available from many online stores including AliExpress. You can use it directly on a solderless breadboard.
+
+**Tip:** Wire a switch between pin **D3** and **GND**. Holding it during startup stops `init.lua` from executing — making it much easier to upload and modify code.
+
+### Firmware
+
+1. Build custom NodeMCU firmware at [nodemcu-build.com](https://nodemcu-build.com/) — select your required modules and download when the build arrives by email.
+2. Flash the firmware using [NodeMCU PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher) (self-contained GUI, no Python install needed).
+
+### LFS (Lua File Storage)
+
+Using LFS is strongly recommended — it stores compiled Lua modules in flash memory, saving RAM.
+
+Cross-compile your modules using the online service at [blog.ellisons.org.uk](https://blog.ellisons.org.uk/article/nodemcu/a-lua-cross-compile-web-service/) to generate an `lfs.img` file, then upload it to the device.
+
+### Software Structure
+
+| File / Folder | Purpose |
+|---------------|---------|
+| `init.lua` | Entry point, starts the system |
+| `mConfig.lua` | Lists which sensor modules are active on this node |
+| `mConfig_*.lua` | Example configuration files for certain modules, rename it to mConfig.lua to use|
+| `mAplist.lua` | List of known routers |
+| `transmit.lua` module | Handles server registration, sensor init, and message routing |
+| `broker` | a text file which contains the server address and port in the format ip:port  or  hostname:port
+| `Things/` folder | Available sensor modules (one file per sensor type) |
+
+Each thing node connects to Wi-Fi using a list of known routers in **mAplist.lua** — no need to change credentials when moving the device between locations.
+
+---
+
+## Web Browser Control Panel
+
+The things-server includes a built-in web server. Just open `http://your-server-ip:PORT` in a browser.
+
+**Getting started:**
+1. Open the small menu in the top corner
+2. Go to **Settings**
+3. Tick the panels you want to display
+
+Panels are configured via JSON files in the `panels/` folder. One can configure a panel using the menu point "Panel Editor"
+
+### Supported Panel Types
+
+| Type | Description |
+|------|-------------|
+| Name/Value list | Simple text display of sensor values |
+| Switch | Toggle a device on/off |
+| Indicator | Show a status (on/off, alert, etc.) |
+| Gauge | Needle-style measurement display |
+| Thermometer | Temperature visualization |
+| Barometer | Air pressure display |
+| Hygrometer | Humidity display |
+
+---
+
+## External Access
+
+To reach your things-server from outside your home network:
+
+1. Set up **port forwarding** on your router to point to the server's IP and port
+2. Optionally use a **DynDNS** service so you have a stable hostname instead of a changing IP address
+
+---
+
+## Project Structure
+
+```
+things-server/
+├── thingsserver.js     # Main server file
+├── config.json         # Server configuration
+├── index.html          # Browser control panel entry point
+├── panel.js            # Panel logic
+├── ws.js               # WebSocket client for browser
+├── ut.js               # Utility functions
+├── panels/             # Panel configuration files (JSON)
+└── Things/             # Lua sensor modules for ESP8266
+```
+
+---
+
+## License
+
+MIT — feel free to use, modify, and share.
