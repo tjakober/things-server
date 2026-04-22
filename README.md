@@ -8,7 +8,7 @@ A WebSocket-based server that connects **IoT devices** (ESP8266 nodes) with a **
 
 > **Example:** Several Sensors and switches displayed in analog gauges on a display panel
 
-![Control Panel Example](images/controlpanel.png)
+![Control Panel Example](Docs/images/ThingsPanel.png)
 
 ---
 ## How it works
