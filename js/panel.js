@@ -67,6 +67,14 @@ var menu = {
             dest: 'panelEdit',
             refresh: false,
             renew: true
+        },
+        {
+            title: 'Arrange Panels',
+            module: 'arrangePanel',
+            active: false,
+            dest: 'arrangePanel',
+            refresh: false,
+            renew: true
         }
     ],
     curTab: 0,
@@ -96,8 +104,8 @@ var menu = {
                 .addClass('indicator')
                 .attr('title', 'Activity')
                 .click(function() {
-                    if ($('#panelEdit').checked()) {
-                        panelEdit.allowEdit(false);
+                    if (arrangePanel.edit) {
+                        arrangePanel.cancel();
                     }
                 })
                 .appendTo(oEng);
@@ -213,6 +221,7 @@ var panel = {
                 }
                 scheduler.start();*/
                 panelEdit.enable();
+                arrangePanel.enable();
                 if (cb) {
                     cb();
                 } else {
@@ -776,17 +785,6 @@ var settings = {
                 .appendTo(pn);
         $('<br/>').appendTo(pn);
         
-        $('<div/>')
-                .addClass('label')
-                .text('Edit panels')
-                .appendTo(pn);
-        $('<input id="allowEdit" name="panelEdit" type="checkbox"/>')
-                .attr('checked', this.panelEdit)
-                .change(function() {
-                    panelEdit.allowEdit(this.checked);
-                })
-                .appendTo(pn);
-        $('<br/>').appendTo(pn);
         var oRs = $('<div/>')
                 .attr('id', 'restart')
                 .appendTo(pn);

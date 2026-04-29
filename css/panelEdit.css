@@ -43,12 +43,33 @@
 .pe-panel-list {
     flex: 1;
     overflow-y: auto;
+    scrollbar-gutter: stable;
+    padding-right: 12px;
 }
+/* Filter row */
+.pe-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    padding: 1px 0 3px;
+    color: #555;
+}
+
+/* Panel item row (item + delete button) */
+.pe-panel-row {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 2px;
+}
+.pe-panel-row .pe-panel-item { flex: 1; min-width: 0; margin-bottom: 0; }
+.pe-panel-del { flex-shrink: 0; padding: 2px 5px; }
+
 .pe-panel-item {
     padding: 5px 8px;
     cursor: pointer;
     border-radius: 3px;
-    margin-bottom: 2px;
     background: white;
     border: 1px solid #ddd;
     font-size: 12px;
@@ -57,7 +78,9 @@
     text-overflow: ellipsis;
 }
 .pe-panel-item:hover { background: #ddeeff; }
-.pe-panel-item.pe-active { background: #2196F3; color: white; border-color: #1565C0; }
+.pe-panel-item.pe-active  { background: #2196F3; color: white; border-color: #1565C0; }
+.pe-panel-item.pe-loaded  { border-left: 3px solid #4CAF50; }
+.pe-panel-item.pe-active.pe-loaded { border-left: 3px solid #81C784; }
 
 /* ── Main ────────────────────────────────── */
 .pe-main {
@@ -163,6 +186,8 @@
 .pe-btn-save:hover { background: #1565C0; }
 .pe-btn-del-panel { background: #f44336; color: white; border-color: #c62828; }
 .pe-btn-del-panel:hover { background: #c62828; }
+.pe-btn-saveas { background: #FF9800; color: white; border-color: #E65100; }
+.pe-btn-saveas:hover { background: #E65100; }
 .pe-btn-add  { background: #E3F2FD; border-color: #90CAF9; color: #0D47A1; font-size: 11px; padding: 2px 7px; }
 .pe-btn-sm   { padding: 1px 5px; font-size: 11px; }
 .pe-btn-move { background: #fff; border-color: #ccc; }
@@ -190,7 +215,7 @@
     background: white;
 }
 .pe-group-hdr {
-    background: #EEF2FF;
+    background: #C5CAE9;
     padding: 5px 8px;
     display: flex;
     align-items: center;

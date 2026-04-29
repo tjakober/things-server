@@ -307,128 +307,223 @@ var listView = {
 };
 
 /*
- * Drag and drop tool to move and size the panels on the screen
- * Go to settings and check the box 'Edit panels'
- * Go back to 'Control Panel'
- * The panels have handles to size it and they can be dragged 
- * to the desired position within the 100 x 100 raster
- * When finished, go back to Settings and uncheck the eDit Panel box
- * You are prompted wether you want to save the result.
- * The file is saved as an unformatted JSON string. You may want to reformat it 
- * by a online tool (e.g. https://jsoneditoronline.org/ or by your favorite
- * editor. 
+ * Drag and drop tool to visually arrange and resize panels on the screen.
+ * Accessible as a menu tab "Arrange Panels" (enabled after panels are loaded).
+ * Drag panels to reposition them; resize via corner handles.
+ * Panel and group names are editable inline.
+ * Click "Save" to persist positions/sizes to localStorage, or "Cancel" to discard.
  */
-var panelEdit = {
-    edit: true,
+var arrangePanel = {
+    _tabIdx: -1,
+    edit: false,
 
-    allowEdit: function(allow) {
+    init: function(el) {
+        arrangePanel._tabIdx = menu.tabs.findIndex(function(t) { return t.dest === 'arrangePanel'; });
+        // #m_arrangePanel is never shown directly; we always work on #m_panel
+        $('#m_arrangePanel').hide();
+    },
+
+    enable: function() {
+        $('ul#menu li').eq(arrangePanel._tabIdx).removeClass('tab-disabled');
+    },
+
+    renew: function() {
+        // changeTab showed #m_arrangePanel and hid #m_panel — reverse that
+        $('#m_arrangePanel').hide();
+        $('#m_panel').show();
+        arrangePanel._addToolbar();
+        arrangePanel._enableDrag(true);
+    },
+
+    _addToolbar: function() {
+        if ($('#arrange-toolbar').length) return;
+        var tb = $('<div id="arrange-toolbar"/>')
+            .css({
+                position: 'sticky', top: 0, zIndex: 200,
+                background: '#FFF9C4', padding: '5px 12px',
+                borderBottom: '2px solid #F9A825',
+                display: 'flex', gap: '8px', alignItems: 'center',
+                fontSize: '13px'
+            })
+            .prependTo('#m_panel');
+        $('<span>Arrange mode — drag panels, resize by corner, edit names inline</span>').appendTo(tb);
+        $('<button/>')
+            .text('Save')
+            .css({marginLeft: '12px', padding: '2px 12px', background: '#4CAF50',
+                  color: 'white', border: '1px solid #388E3C', borderRadius: '3px', cursor: 'pointer'})
+            .click(function() { arrangePanel._save(); })
+            .appendTo(tb);
+        $('<button/>')
+            .text('Save to file')
+            .css({marginLeft: '6px', padding: '2px 10px', background: '#FF9800',
+                  color: 'white', border: '1px solid #E65100', borderRadius: '3px', cursor: 'pointer'})
+            .attr('title', 'Save positions/sizes back to server JSON files')
+            .click(function() { arrangePanel._saveToFile(); })
+            .appendTo(tb);
+        $('<button/>')
+            .text('Cancel')
+            .css({marginLeft: '6px', padding: '2px 10px', background: '#f0f0f0',
+                  border: '1px solid #bbb', borderRadius: '3px', cursor: 'pointer'})
+            .click(function() { arrangePanel.cancel(); })
+            .appendTo(tb);
+    },
+
+    _removeToolbar: function() {
+        $('#arrange-toolbar').remove();
+    },
+
+    _enableDrag: function(on) {
         var gridDrag = {
-            grid: [panel.gridSize, panel.gridSize], 
-            containment: "window", 
+            grid: [panel.gridSize, panel.gridSize],
+            containment: "window",
             scroll: true,
             disabled: true,
-            cursor: "hand"
+            cursor: "move"
         };
-         var gridResz = {
-            grid: [panel.gridSize, panel.gridSize], 
+        var gridResz = {
+            grid: [panel.gridSize, panel.gridSize],
             containment: "parent",
             scroll: true,
             disabled: true
         };
-       
-        //$('.thing canvas').remove();
-        $('.thing')
-                .draggable(gridDrag)
-                .resizable(gridResz);
-        panelEdit.edit = allow;
-        if (allow) {
-            $('.thing')
-                    .resizable({
-                        resize: function(event, ui) {
-                            var oThing = panel.things[ui.element.attr('panelindex')];
-                            for (var i=0; i<oThing.groups.length; i++) {
-                                for (var k=0; k<oThing.groups[i].data.length; k++) {
-                                    const oData = oThing.groups[i].data[k];
-                                    if (oData.js) {
-                                        let module = oData.js.slice(0, -3);
-                                        let func = module+'.displayData';
-                                        let oGroup = $('.group', ui.element);
-                                        let oVal = $($('.value', oGroup[i])[k]);
-                                        oVal.empty();
-                                        if (typeof(window[module]) === 'object') {
-                                            executeFunctionByName(func, window.top, oGroup, oData, oVal, (oContent) => {
-                                                if (typeof(oContent) !== 'undefined') {
-                                                    oContent.appendTo(oVal);
-                                                }
-                                            });
+        $('.thing').draggable(gridDrag).resizable(gridResz);
+        arrangePanel.edit = on;
+        if (on) {
+            $('.thing').resizable({
+                resize: function(event, ui) {
+                    var oThing = panel.things[ui.element.attr('panelindex')];
+                    for (var i = 0; i < oThing.groups.length; i++) {
+                        for (var k = 0; k < oThing.groups[i].data.length; k++) {
+                            const oData = oThing.groups[i].data[k];
+                            if (oData.js) {
+                                let module = oData.js.slice(0, -3);
+                                let func = module + '.displayData';
+                                let oGroup = $('.group', ui.element);
+                                let oVal = $($('.value', oGroup[i])[k]);
+                                oVal.empty();
+                                if (typeof(window[module]) === 'object') {
+                                    executeFunctionByName(func, window.top, oGroup, oData, oVal, (oContent) => {
+                                        if (typeof(oContent) !== 'undefined') {
+                                            oContent.appendTo(oVal);
                                         }
-                                    };
+                                    });
                                 }
                             }
                         }
-                   });
-                    
-            $('.thing')
-                    .draggable("enable")
-                    .resizable("enable");
-
+                    }
+                }
+            });
+            $('.thing').draggable("enable").resizable("enable");
+            // Convert headings to editable inputs
             $('.thing h3').each(function() {
                 var tx = $(this).text();
                 $(this).text('');
-                $('<input/>')
-                        .val(tx)
-                        .appendTo(this);
+                $('<input/>').val(tx).css({width: '90%'}).appendTo(this);
             });
             $('.thing h4').each(function() {
                 var tx = $(this).text();
                 $(this).text('');
-                $('<input/>')
-                        .val(tx)
-                        .appendTo(this);
-            
+                $('<input/>').val(tx).css({width: '90%'}).appendTo(this);
             });
-            $('#menu li')[0].click();
         } else {
-            $('.thing')
-                    .draggable("disable")
-                    .resizable("disable");
+            $('.thing').draggable("disable").resizable("disable");
+            // Restore headings from inputs
             $('.thing h3').each(function() {
                 var tx = $('input', this).val();
                 $('input', this).remove();
-                $(this)
-                        .text(tx)
-                        .parent().attr('title', tx);
+                $(this).text(tx).parent().attr('title', tx);
             });
             $('.thing h4').each(function() {
                 var tx = $('input', this).val();
                 $('input', this).remove();
-                $(this)
-                        .text(tx)     
-                        .parent().attr('title', tx);
+                $(this).text(tx).parent().attr('title', tx);
             });
             $('.newPanel').removeClass('newPanel');
-            panelEdit.saveThings();
         }
     },
-    
-    saveThings: function() {
+
+    _save: function() {
+        arrangePanel._enableDrag(false);
+        arrangePanel._removeToolbar();
         $('#menu li')[0].click();
-        if (window.confirm('Save new positions and text?')) {
-            for(var i=0; i<panel.things.length; i++) {
+        if (window.confirm('Save new positions and sizes?')) {
+            for (var i = 0; i < panel.things.length; i++) {
                 var p = panel.things[i];
-                var oThing = $('#m_panel .thing[filename="'+p.filename+'"]');
+                var oThing = $('#m_panel .thing[filename="' + p.filename + '"]');
                 p.size.cols = Math.floor((oThing.width() + 10) / panel.gridSize);
                 p.size.rows = Math.floor(oThing.height() / panel.gridSize) + 1;
-                p.pos.top = Math.floor(oThing.css('top').slice(0, -2) / panel.gridSize);
-                p.pos.left = Math.floor(oThing.css('left').slice(0, -2) / panel.gridSize);
+                p.pos.top  = Math.floor(parseFloat(oThing.css('top'))  / panel.gridSize);
+                p.pos.left = Math.floor(parseFloat(oThing.css('left')) / panel.gridSize);
                 p.name = $('h3', oThing).text();
-                const oTx = $('h4', oThing);
-                oTx.each((k) => {
-                    p.groups[0].name = oTx[k].textContent;
+                var oTx = $('h4', oThing);
+                oTx.each(function(k) {
+                    if (p.groups[k]) p.groups[k].name = oTx[k].textContent;
                 });
-                window.localStorage.setItem('th_'+p.filename, JSON.stringify(p));
+                window.localStorage.setItem('th_' + p.filename, JSON.stringify(p));
             }
         }
+        panel.displayPanel();
+    },
+
+    // Save current arrangement as a named configuration (appears in Settings > Configurations)
+    _saveToFile: function() {
+        // Pre-fill with the currently active configuration name (if any)
+        var currentName = $('.curconfig span', '#configurations').text() || '';
+        var name = prompt('Konfigurationsname:', currentName);
+        if (name === null) return;
+        name = name.trim();
+        if (!name) return;
+
+        // Persist current positions/sizes to localStorage (same logic as _save)
+        for (var i = 0; i < panel.things.length; i++) {
+            var p = panel.things[i];
+            var oThing = $('#m_panel .thing[filename="' + p.filename + '"]');
+            p.size.cols = Math.floor((oThing.width() + 10) / panel.gridSize);
+            p.size.rows = Math.floor(oThing.height() / panel.gridSize) + 1;
+            p.pos.top   = Math.floor(parseFloat(oThing.css('top'))  / panel.gridSize);
+            p.pos.left  = Math.floor(parseFloat(oThing.css('left')) / panel.gridSize);
+            p.name = $('h3', oThing).text();
+            var oTx = $('h4', oThing);
+            oTx.each(function(k) {
+                if (p.groups[k]) p.groups[k].name = oTx[k].textContent;
+            });
+            window.localStorage.setItem('th_' + p.filename, JSON.stringify(p));
+        }
+
+        // Build config payload (all active th_ entries)
+        var config = '[';
+        for (var j = 0; j < window.localStorage.length; j++) {
+            var key = window.localStorage.key(j);
+            if (key.substr(0, 3) === 'th_') {
+                config += window.localStorage.getItem(key) + ',';
+            }
+        }
+        config = config.slice(0, -1) + ']';
+
+        $.post('panel', {cmd: 'storeConfig', fn: name, data: config}, function(resp) {
+            if (resp !== 'success') { alert('Save failed: ' + resp); return; }
+            // Refresh Configurations list and mark the new entry as active
+            settings.listConfig(function() {
+                var rows = $('#configurations li');
+                rows.removeClass('curconfig');
+                rows.each(function(idx) {
+                    if ($('span', this).text() === name) {
+                        $(this).addClass('curconfig');
+                        window.localStorage.setItem('sth_curconfig', String(idx));
+                    }
+                });
+            });
+            arrangePanel._enableDrag(false);
+            arrangePanel._removeToolbar();
+            $('#menu li')[0].click();
+            panel.displayPanel();
+        });
+    },
+
+    cancel: function() {
+        arrangePanel._enableDrag(false);
+        arrangePanel._removeToolbar();
+        $('#menu li')[0].click();
         panel.displayPanel();
     }
 };

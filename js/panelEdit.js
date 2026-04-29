@@ -18,6 +18,13 @@ var panelEdit = {
         $('<div class="pe-sidebar-title">Panels</div>').appendTo(sb);
         $('<button class="pe-btn pe-btn-new">+ New Panel</button>')
             .click(panelEdit._newPanel).appendTo(sb);
+        // Filter row
+        var fr = $('<div class="pe-filter-row"/>').appendTo(sb);
+        $('<label/>')
+            .append($('<input type="checkbox" id="pe-show-all"/>').prop('checked', true)
+                .change(function() { panelEdit._loadPanelList(); }))
+            .append(' All')
+            .appendTo(fr);
         $('<div class="pe-panel-list" id="pe-list"/>').appendTo(sb);
 
         $('<div class="pe-main" id="pe-main"/>').appendTo(cont);
@@ -38,6 +45,7 @@ var panelEdit = {
     // ── Panel list ────────────────────────────────────────────────────────────
 
     _loadPanelList: function() {
+        var showAll = $('#pe-show-all').prop('checked');
         $.post('panel', {cmd: 'panelList'}, function(s) {
             var list = $('#pe-list').empty();
             var names = s.split(',')
@@ -45,10 +53,29 @@ var panelEdit = {
                 .map(function(f) { return f.slice(0, -5); });
             names.sort();
             names.forEach(function(n) {
+                var isLoaded = !!window.localStorage.getItem('th_' + n);
+                if (!showAll && !isLoaded) return;
+                var row = $('<div class="pe-panel-row"/>').appendTo(list);
                 $('<div class="pe-panel-item"/>').text(n)
                     .toggleClass('pe-active', n === panelEdit._panelName)
+                    .toggleClass('pe-loaded', isLoaded)
                     .click(function() { panelEdit._selectPanel(n); })
-                    .appendTo(list);
+                    .appendTo(row);
+                $('<button class="pe-btn pe-btn-sm pe-btn-rm pe-panel-del"/>').text('✕')
+                    .attr('title', 'Delete ' + n)
+                    .click(function() {
+                        if (!confirm('Delete panel "' + n + '"?')) return;
+                        $.post('panel', {cmd: 'deletePanel', fn: n}, function(resp) {
+                            if (resp === 'success') {
+                                if (panelEdit._panelName === n) {
+                                    panelEdit._panelName = '';
+                                    panelEdit._current = null;
+                                    $('#pe-main').empty();
+                                }
+                                panelEdit._loadPanelList();
+                            }
+                        });
+                    }).appendTo(row);
             });
         });
     },
@@ -110,6 +137,8 @@ var panelEdit = {
         var act = $('<div class="pe-actions"/>').appendTo(main);
         $('<button class="pe-btn pe-btn-save">Save</button>')
             .click(panelEdit._savePanel).appendTo(act);
+        $('<button class="pe-btn pe-btn-saveas">Save as…</button>')
+            .click(panelEdit._saveAsPanel).appendTo(act);
         if (panelEdit._panelName) {
             $('<button class="pe-btn pe-btn-del-panel">Delete Panel</button>')
                 .click(panelEdit._deletePanel).appendTo(act);
@@ -592,9 +621,36 @@ var panelEdit = {
             if (resp === 'success') {
                 panelEdit._panelName = p.filename;
                 panelEdit._current = p;
+                // Keep localStorage in sync if this panel is currently active
+                if (window.localStorage.getItem('th_' + p.filename)) {
+                    window.localStorage.setItem('th_' + p.filename, JSON.stringify(p));
+                }
                 panelEdit._loadPanelList();
                 panelEdit._renderEditor();
                 panelEdit._status('Saved', 'ok');
+            } else {
+                panelEdit._status('Error: ' + resp, 'err');
+            }
+        });
+    },
+
+    _saveAsPanel: function() {
+        var p = panelEdit._collectPanel();
+        var newFn = prompt('Save as filename (without .json):', p.filename || '');
+        if (newFn === null) return;
+        newFn = newFn.trim();
+        if (!newFn) { panelEdit._status('Filename required', 'err'); return; }
+        p.filename = newFn;
+        $.post('panel', {cmd: 'savePanel', fn: newFn, data: JSON.stringify(p, null, 2)}, function(resp) {
+            if (resp === 'success') {
+                panelEdit._panelName = newFn;
+                panelEdit._current = p;
+                if (window.localStorage.getItem('th_' + newFn)) {
+                    window.localStorage.setItem('th_' + newFn, JSON.stringify(p));
+                }
+                panelEdit._loadPanelList();
+                panelEdit._renderEditor();
+                panelEdit._status('Saved as ' + newFn, 'ok');
             } else {
                 panelEdit._status('Error: ' + resp, 'err');
             }
