@@ -1,4 +1,5 @@
 # things-server
+If you want a completely autonomous home automation system, that's the project you need. Your own server, your own sensors, everything under yor control.
 
 A WebSocket-based server that connects **IoT devices** (ESP8266 nodes) with a **web browser** — accessible from anywhere in the world.
 
@@ -36,10 +37,11 @@ A WebSocket-based server that connects **IoT devices** (ESP8266 nodes) with a **
 ---
 
 ## Requirements
-
+rduino 
 - [Node.js](https://nodejs.org/) (v12 or newer recommended)
 - npm (comes with Node.js)
 - A router with port forwarding if you want external access (optional)
+- ESP-8266 Nodes, i use WEMOS D1 mini programmed under Nodemcu - LUA
 
 ---
 
